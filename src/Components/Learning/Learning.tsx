@@ -1,0 +1,9 @@
+import React from 'react'
+
+export default function Learning() {
+  return (
+      <div>
+          <h2>Sources I've learned from</h2>
+    </div>
+  )
+}
