@@ -2,7 +2,7 @@ import React from "react";
 
 const DownloadCV: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg
-        fill="#ffffff"
+        fill="currentColor"
         width="32"
         height="32"
         viewBox="0 0 32 32"
