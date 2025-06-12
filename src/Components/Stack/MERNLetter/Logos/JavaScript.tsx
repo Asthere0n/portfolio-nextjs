@@ -2,13 +2,13 @@ import React from "react";
 
 const JavaScript: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg
-        fill="#ffffff"
+        fill="currentColor"
         height={32}
         width={32}
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
-        stroke="#ffffff"
+        stroke="currentColor"
         {...props}
     >
         <g>

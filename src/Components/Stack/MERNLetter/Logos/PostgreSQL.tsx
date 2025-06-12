@@ -2,10 +2,12 @@ import React from "react";
 
 const PostgreSQL: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg
-        fill="#ffffff"
+        fill="currentColor"
         viewBox="0 0 32 32"
+        width={32}
+        height={32}
         xmlns="http://www.w3.org/2000/svg"
-        stroke="#ffffff"
+        stroke="currentColor"
         strokeWidth="0.16"
         {...props}
     >

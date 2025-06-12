@@ -2,10 +2,12 @@ import React from "react";
 
 const MySQL: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg
-        fill="#ffffff"
+        fill="currentColor"
+        height={32}
+        width={32}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        stroke="#ffffff"
+        stroke="currentColor"
         strokeWidth={0.24}
         {...props}
     >
