@@ -1,12 +1,12 @@
-import Contact from "@/Components/Contact/Contact";
-import {ExpandableCard} from "@/Components/ExpandableCard/ExpandableCard";
-import Experience from "@/Components/Experience/Experience";
-import Footer from "@/Components/Footer/Footer";
-import Hero from "@/Components/Hero/Hero";
-import Learning from "@/Components/Learning/Learning";
-import Stack from "@/Components/Stack/Stack";
-import Testimonials from "@/Components/Testimonials/Testimonials";
-import Welcome from "@/Components/Welcome/Welcome";
+import Contact from "@/components/Contact/Contact";
+import {ExpandableCard} from "@/components/ExpandableCard/ExpandableCard";
+import Experience from "@/components/Experience/Experience";
+import Footer from "@/components/Footer/Footer";
+import Hero from "@/components/Hero/Hero";
+import Learning from "@/components/Learning/Learning";
+import Stack from "@/components/Stack/Stack";
+import Testimonials from "@/components/Testimonials/Testimonials";
+import Welcome from "@/components/Welcome/Welcome";
 
 export default function Home() {
   return (
