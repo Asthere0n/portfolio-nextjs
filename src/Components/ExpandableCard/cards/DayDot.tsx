@@ -4,7 +4,7 @@ export default function DayDot() {
     return (
         <div className="flex flex-col gap-2 py-2">
             <p>Status <span className='p-2 bg-green-400 rounded-xl'>Deployed</span></p>
-            <p>React • Tailwind • Vercel</p>
+            <p>React • CSS • Vercel</p>
             <p className='font-extrabold mt-2 w-full bg-slate-800 px-2'>Description</p>
             <p>In hospitality, perishable products often require individual DayDot stickers with varying shelf lives. Staff frequently struggle to calculate correct expiry dates across different products, leading to potential waste, mistakes, or health risks. I built DayDot to simplify and automate these calculations, improving accuracy and efficiency.</p>
 

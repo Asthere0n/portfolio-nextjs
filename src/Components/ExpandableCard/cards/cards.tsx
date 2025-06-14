@@ -9,7 +9,7 @@ const cards = [
     {
         description: "A task management tool with full CRUD functionality",
         title: "Task-Tracker",
-        src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+        src: "/img/task-list.png",
         ctaText: "Demo",
         ctaLink: "https://github.com/Asthere0n/Task-Tracker",
         content: () => {
@@ -19,9 +19,9 @@ const cards = [
         },
     },
     {
-        description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
+        description: "A web tool that simplifies expiry date calculations for perishable products",
         title: "DayDot",
-        src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+        src: "/img/Daydot.jpg",
         ctaText: "Unavailable",
         ctaLink: "https://day-dot.vercel.app/",
         content: () => {
@@ -33,7 +33,7 @@ const cards = [
     {
         description: "Game based on the Knight in chess, against an AI using pathfinding algorythms",
         title: "E-Knight-ma",
-        src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+        src: "/img/ChessKnight.webp",
         ctaText: "Visit",
         ctaLink: "https://ui.aceternity.com/templates",
         content: () => {
@@ -45,8 +45,8 @@ const cards = [
 
     {
         description: "A full personal and professional migration to Arch Linux",
-        title: "Arch Linux",
-        src: "https://assets.aceternity.com/demos/metallica.jpeg",
+        title: "Arch Linux (btw)",
+        src: "/img/arch-linux.png",
         ctaText: "Visit",
         ctaLink: "https://ui.aceternity.com/templates",
         content: () => {
@@ -58,7 +58,7 @@ const cards = [
     {
         description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
         title: "Paper Dragon",
-        src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+        src: "/img/paper-dragon.svg",
         ctaText: "Unavailable",
         ctaLink: "https://ui.aceternity.com/templates",
         content: () => {
