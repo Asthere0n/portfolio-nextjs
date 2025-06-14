@@ -1,5 +1,4 @@
 import Contact from "@/components/Contact/Contact";
-import {ExpandableCard} from "@/components/ExpandableCard/ExpandableCard";
 import Experience from "@/components/Experience/Experience";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
@@ -14,7 +13,6 @@ export default function Home() {
       <Welcome />
       <Hero />
       <Stack />
-      <ExpandableCard/>
       <Experience />
       <Learning />
       <Testimonials />

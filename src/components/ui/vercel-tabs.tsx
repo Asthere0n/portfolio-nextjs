@@ -69,7 +69,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
         <div className="relative">
           {/* Hover Highlight */}
           <div
-            className="absolute h-[30px] transition-all duration-300 ease-out bg-[#0e0f1114] dark:bg-[#ffffff1a] rounded-[6px] flex items-center"
+            className="absolute h-[30px] transition-all duration-300 ease-out bg-slate-700 rounded-md flex items-center"
             style={{
               ...hoverStyle,
               opacity: hoveredIndex !== null ? 1 : 0,
@@ -78,7 +78,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
 
           {/* Active Indicator */}
           <div
-            className="absolute bottom-[-6px] h-[2px] bg-[#0e0f11] dark:bg-white transition-all duration-300 ease-out"
+            className="absolute bottom-[-10px] h-[4px] bg-yellow-400 transition-all duration-300 ease-out"
             style={activeStyle}
           />
 
@@ -91,8 +91,8 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                 className={cn(
                   "px-3 py-2 cursor-pointer transition-colors duration-300 h-[30px]",
                   index === activeIndex 
-                    ? "text-[#0e0e10] dark:text-white" 
-                    : "text-[#0e0f1199] dark:text-[#ffffff99]"
+                    ? "text-yellow-400" 
+                    : "text-white"
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -101,7 +101,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                   onTabChange?.(tab.id)
                 }}
               >
-                <div className="text-sm font-medium leading-5 whitespace-nowrap flex items-center justify-center h-full">
+                <div className="font-medium leading-5 whitespace-nowrap text-2xl flex items-center justify-center h-full">
                   {tab.label}
                 </div>
               </div>
