@@ -13,7 +13,7 @@ export default function Hero() {
         <div className='flex gap-5 px-5 items-center'>
           <SpainFlag className='w-12' />
           <UKFlag className='w-12' />
-          <h3 className='text-slate-400 text-3xl'>Bylingual | <span className='text-xl text-green-400 p-3 border-2 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:font-weight-bold'>LOOKING FOR WORK</span></h3>
+          <h3 className='text-slate-400 text-3xl'>Bilingual | <span className='text-xl text-green-400 p-3 border-2 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:font-weight-bold'>LOOKING FOR WORK</span></h3>
         </div>
         <p className='text-lg p-5 text-justify'>
           A former hospitality manager turned <span className='text-yellow-400'>Full-Stack Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.

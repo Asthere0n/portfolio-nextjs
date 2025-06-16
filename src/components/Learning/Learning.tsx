@@ -1,15 +1,12 @@
 import React from 'react'
+import { LearningCaroussel } from './LearningCaroussel'
 
 export default function Learning() {
   return (
-      <div>
-      <h2>Sources I've learned from</h2>
-      <ul>
-        <li>Eloquent JavaScript</li>
-        <li>Remastering UI</li>
-        <li>Grokking Algorithms</li>
-        <li>(Spanish) Aprendiendo Git y GitHub</li>
-      </ul>
+      <div className='h-screen'>
+      <h2 className='text-3xl'>Sources I've learned from</h2>
+      <h3 className='text-2xl text-slate-600'>If you either are another Junior Developer or if you want to sharp your edge, this are some resources I founded very useful and interesting. </h3>
+      <LearningCaroussel/>
     </div>
   )
 }
