@@ -4,6 +4,7 @@ import { Timeline } from "../ui/timeline";
 import WorkCard from "./WorkCard/WorkCard";
 import { title } from "process";
 import { Content } from "next/font/google";
+import Moving from "./Moving/Moving";
 
 export function Work() {
   const data = [
@@ -33,9 +34,12 @@ export function Work() {
             company="Ellie's cellar"
             dates="April-2024 ~ Feb-2025"
             location="Alva, UK"
-            responsabilities={["Managed daily operations independently while working solo shifts","Handled inventory checks and organized deliveries for multiple branches","Completed end-of-day banking and shop closing procedures","Provided personalized customer service and product recommendations"]}
+            responsabilities={["Managed daily operations independently while working solo shifts", "Handled inventory checks and organized deliveries for multiple branches", "Completed end-of-day banking and shop closing procedures", "Provided personalized customer service and product recommendations"]}
             description="At Ellie’s Cellar I balanced a part-time customer service while starting my journey into full-stack development. I worked independently, assisting customers, managing deliveries, handling banking, and overseeing daily operations alone."
           />
+
+          <Moving origin="England" destination="Scotland" />
+
         </div>
       ),
     },
@@ -49,7 +53,7 @@ export function Work() {
             location="London, UK"
             company="Joe & the Juice"
             dates="Sept-2021 ~ Feb-2024"
-            responsabilities={["Became Store Manager in 3 months","Managed teams of 40+ staff with focus on training and performance","Selected for SWAT Team handling store openings & recovery projects","Collaborated with Head office and area managers on high-priority assignments"]}
+            responsabilities={["Became Store Manager in 3 months", "Managed teams of 40+ staff with focus on training and performance", "Selected for SWAT Team handling store openings & recovery projects", "Collaborated with Head office and area managers on high-priority assignments"]}
             description="At Joe & The Juice I advanced quickly from team Member to store manager in 3 months, leading a 40-person team at Victoria. After two years I joined the SWAT Team, handling store launches, manager training, and turnaround projects across multiple locations. This role sharpened my leadership, training, problem-solving, and cross-team collaboration — skills directly transferable to complex software projects."
           />
         </div>
@@ -61,13 +65,14 @@ export function Work() {
         <div>
           <WorkCard
             title="Barista"
-            src="/img/pret.png" 
+            src="/img/pret.png"
             location="London, UK"
             company="Pret A Manger"
             dates="April-2018 ~ March-2021"
-            responsabilities={["Built and maintained a strong local network with nearby store teams","Optimized workflow and procedures in high-volume high-preassure environments","Operated under high-pressure conditions in one of the UK’s busiest shops"]}
+            responsabilities={["Built and maintained a strong local network with nearby store teams", "Optimized workflow and procedures in high-volume high-preassure environments", "Operated under high-pressure conditions in one of the UK’s busiest shops"]}
             description="At Pret A Manger I managed daily barista duties while also coordinating supply logistics between shops around King’s Cross. I built a strong network with nearby teams to ensure smooth operations. Working in one of the UK’s busiest locations taught me to optimize workflows, stay calm under pressure, and adapt quickly."
           />
+          <Moving origin="Spain" destination="England" />
         </div>
       ),
     },
