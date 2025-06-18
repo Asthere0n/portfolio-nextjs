@@ -15,12 +15,12 @@ export default function MERNLetter(props: Props) {
   const color = props.color
 
   return (
-    <div className='text-white flex items-center'>
-      <div className={`border-4 border-white bg-${color}-400 text-5xl w-20 h-20 flex justify-center items-center p-4 rounded-full m-4`}>
+    <div className='text-slate-200 flex items-center'>
+      <div className={`border-4 border-slate-200 bg-${color}-400 text-5xl w-20 h-20 flex justify-center items-center p-4 rounded-full m-4`}>
       {props.icon}
       </div>
       <div>
-      <h4 className='text-4xl'><span className={`text-4xl text-${color}-400`}>{initial}</span>{rest}</h4>
+      <h4 className='text-4xl text-slate-200'><span className={`text-4xl text-${color}-400`}>{initial}</span>{rest}</h4>
         <p className='text-xl text-slate-400'>{props.subtitle}</p>
       </div>
     </div>

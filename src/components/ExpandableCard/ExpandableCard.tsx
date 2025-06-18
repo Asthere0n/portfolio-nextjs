@@ -96,7 +96,7 @@ export function ExpandableCard() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-white text-base font-bold"
+                      className="text-slate-200 text-base font-bold"
                     >
                       {active.description}
                     </motion.p>
@@ -120,7 +120,7 @@ export function ExpandableCard() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 1 }}
-                    className="text-white text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
+                    className="text-slate-200 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -138,7 +138,7 @@ export function ExpandableCard() {
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-6 flex flex-col hover:bg-slate-800 rounded-xl cursor-pointer"
+            className="p-6 flex flex-col bg-slate-600 shadow-xl hover:shadow-2xl hover:bg-slate-800 rounded-xl cursor-pointer h-108"
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>

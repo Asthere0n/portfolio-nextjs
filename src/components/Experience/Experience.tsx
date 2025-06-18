@@ -12,7 +12,7 @@ const tabs = [
 export default function Experience() {
   const [activeTab, setActiveTab] = useState("Projects")
   return (
-    <div className="flex flex-col items-center justify-center w-[80%] p-8 transition-all duration-1000 border-2 border-slate-400 bg-slate-700 rounded-3xl">
+    <div className="flex flex-col items-center justify-center w-[80%] p-12 transition-all duration-1000 border-4 border-slate-600 bg-slate-700 rounded-3xl">
       <Tabs
       tabs={tabs}
       activeTab={activeTab}

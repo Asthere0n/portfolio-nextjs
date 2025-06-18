@@ -9,7 +9,7 @@ import ContactButton from './ContactButton/ContactButton'
 
 export default function ContactLinks() {
     return (
-        <div className='w-fit flex justify-center items-center'>
+        <div className='w-fit flex justify-center items-center text-slate-200'>
             <ContactButton name='GitHub' link='https://github.com/Asthere0n' icon={<GitHub/>}/>
             <ContactButton name='LinkedIn' icon={<LinkedIn/>} link='https://www.linkedin.com/in/cristian-sanchez-c/'/>
             <ContactButton name='CV' icon={<DownloadCV />} link='#' />
