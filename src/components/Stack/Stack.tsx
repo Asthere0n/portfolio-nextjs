@@ -16,10 +16,10 @@ import Miro from '../../../public/icons/Miro'
 
 export default function Stack() {
     return (
-        <div className='w-full min-h-[100dvh] flex justify-center items-start px-28'>
+        <div className='w-full min-h-[100dvh] flex flex-col lg:flex-row justify-center items-start px-28'>
             <div className='m-8 w-[60%]'>
                 <h2 className='text-5xl'>But what's <span className='text-yellow-400'>MERN</span>?</h2>
-                <p className='text-2xl text-slate-400 w-[80%] my-5'>MERN is the set of tools of my choice that allow me to build complete application from top to bottom without ever leaving JavaScript.</p>
+                <p className='text-2xl text-slate-400 w-[45ch] my-5 text-justify'>MERN is the set of tools of my choice that allow me to build complete application from top to bottom without ever leaving JavaScript.</p>
                 <MERNLetter name='MongoDB' delay={0} icon={<MongoDB />} color='green' subtitle='NoSQL Database' />
                 <MERNLetter name='Express' delay={10} icon={<Expressjs />} color='yellow' subtitle='Back end Framework to build RESTful APIs' />
                 <MERNLetter name='React' delay={10} color='cyan' icon={<ReactJS />} subtitle='Front end Framework to build user interfaces' />

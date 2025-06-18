@@ -69,7 +69,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
         <div className="relative">
           {/* Hover Highlight */}
           <div
-            className="absolute h-[30px] transition-all duration-300 ease-out bg-slate-700 rounded-md flex items-center"
+            className="absolute h-[30px] transition-all duration-300 ease-out bg-slate-800 rounded-md flex items-center"
             style={{
               ...hoverStyle,
               opacity: hoveredIndex !== null ? 1 : 0,

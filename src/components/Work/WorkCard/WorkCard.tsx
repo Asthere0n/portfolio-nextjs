@@ -18,9 +18,9 @@ export default function WorkCard(props: Props) {
             <div className={styles["flip-card"]}>
                 <div className={styles["flip-card-inner"]}>
                     <div className={styles["flip-card-front"]}>
-                        <div className='w-full h-full grid grid-cols-3 grid-rows-3 p-4 rounded-2xl border-2 justify-around items-start border-white overflow-hidden'>
+                        <div className='w-full h-full grid grid-cols-3 grid-rows-3 p-6 rounded-2xl border-2 justify-around items-start border-slate-400 bg-slate-800 overflow-hidden'>
                             <div className=' flex justify-start items-center gap-4 col-start-1 col-end-4' >
-                                <Image src={props.src} alt='' width={60} height={60} className='rounded-sm'/>
+                                <Image src={props.src} alt='' width={40} height={40} className='rounded-sm'/>
                                 <p className='text-2xl font-bold'>{props.title}</p>
                             </div>
                             <div className='row-start-2 row-end-4 flex flex-col justify-center items-start h-full'>

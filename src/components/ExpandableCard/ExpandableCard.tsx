@@ -32,7 +32,11 @@ export function ExpandableCard() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <>
+    <motion.div
+    className="min-h-screen w-fit"
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5, ease: "easeOut" }}>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -128,13 +132,13 @@ export function ExpandableCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-1/2 mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-4">
+      <ul className="max-w-[90%] mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-4">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-slate-700 rounded-xl cursor-pointer"
+            className="p-6 flex flex-col hover:bg-slate-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -164,7 +168,7 @@ export function ExpandableCard() {
           </motion.div>
         ))}
       </ul>
-    </>
+    </motion.div>
   );
 }
 

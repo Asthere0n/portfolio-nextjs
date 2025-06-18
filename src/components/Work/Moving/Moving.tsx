@@ -39,9 +39,9 @@ export default function Moving(props: Props) {
         setShakeDest(true);
         setTimeout(() => {
           setShakeDest(false);
-          loop = setTimeout(animate, 500);
+          loop = setTimeout(animate, 2000);
         }, 500);
-      }, duration * 0.33);
+      }, duration * 0.6);
     };
 
     animate();

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {motion} from "motion/react"
 import React from "react";
 import { Timeline } from "../ui/timeline";
 import WorkCard from "./WorkCard/WorkCard";
@@ -94,10 +95,14 @@ export function Work() {
     },
   ];
   return (
-    <div className="min-h-screen w-full">
-      <div className="top-0 left-0 w-full">
-        <Timeline data={data} />
-      </div>
-    </div>
+    <motion.div
+      className="min-h-screen w-full"
+      initial={{ opacity: 0, x:100 }}
+      animate={{ opacity: 1, x:0 }}
+    transition={{duration:0.3, ease: "easeOut"}}>
+        <div className="top-0 left-0 w-full">
+          <Timeline data={data} />
+        </div>
+    </motion.div>
   );
 }

@@ -15,8 +15,6 @@ export default function Home() {
       <Stack />
       <Experience />
       <Learning />
-      <Testimonials />
-      <Contact />
       <Footer />
     </>
   );

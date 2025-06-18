@@ -12,15 +12,15 @@ const tabs = [
 export default function Experience() {
   const [activeTab, setActiveTab] = useState("Projects")
   return (
-    <div className="flex flex-col items-center w-full min-h-screen">
+    <div className="flex flex-col items-center justify-center w-[80%] p-8 transition-all duration-1000 border-2 border-slate-400 bg-slate-700 rounded-3xl">
       <Tabs
-        tabs={tabs}
-        activeTab={activeTab}
-        onTabChange={(tabId) => setActiveTab(tabId)}
-        className="mb-8"
+      tabs={tabs}
+      activeTab={activeTab}
+      onTabChange={(tabId) => setActiveTab(tabId)}
+      className="mb-8"
       />
-      <div className="flex justify-center items-center w-[90%]">
-        {activeTab === "Projects" ? <ExpandableCard /> : <Work/>}
+      <div className="flex justify-center items-center w-fit transition-all duration-500">
+      {activeTab === "Projects" ? <ExpandableCard /> : <Work/>}
       </div>
     </div>
   )
