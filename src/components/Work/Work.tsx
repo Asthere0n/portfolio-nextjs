@@ -20,7 +20,7 @@ export function Work() {
             location="Stirling, UK"
             description="At Costa Coffee I led daily operations while applying my growing web development skills to real business problems. I built tools like the Task Manager and Day-Dot Maker to improve team efficiency and reduce errors. This role sharpened both my leadership and my ability to deliver practical software solutions in real work environments."
             src="/img/costa-coffee.jpg"
-            responsabilities={["Designed custom web tools to improve store processes", "Supervised daily store operations and team performance", "Conducted inventory checks and managed stock orders", "Delivered customer service and handled conflict resolution"]}
+            responsabilities={["Designed custom web tools to improve store processes", "Supervised daily store operations and team performance", "Delivered customer service and handled conflict resolution"]}
           />
         </div>
       ),
@@ -35,7 +35,7 @@ export function Work() {
             company="Ellie's cellar"
             dates="April-2024 ~ Feb-2025"
             location="Alva, UK"
-            responsabilities={["Managed daily operations independently while working solo shifts", "Handled inventory checks and organized deliveries for multiple branches", "Completed end-of-day banking and shop closing procedures", "Provided personalized customer service and product recommendations"]}
+            responsabilities={["Managed daily operations independently while working solo shifts", "Handled inventory checks and organized deliveries for multiple branches", "Completed end-of-day banking and shop closing procedures"]}
             description="At Ellie’s Cellar I balanced a part-time customer service while starting my journey into full-stack development. I worked independently, assisting customers, managing deliveries, handling banking, and overseeing daily operations alone."
           />
 
@@ -54,7 +54,7 @@ export function Work() {
             location="London, UK"
             company="Joe & the Juice"
             dates="Sept-2021 ~ Feb-2024"
-            responsabilities={["Became Store Manager in 3 months", "Managed teams of 40+ staff with focus on training and performance", "Selected for SWAT Team handling store openings & recovery projects", "Collaborated with Head office and area managers on high-priority assignments"]}
+            responsabilities={[ "Managed teams of 40 staff with focus on training and performance","Became Store Manager in 3 months", "Selected for SWAT Team handling store openings & recovery projects", "Collaborated with Head office and area managers on high-priority assignments"]}
             description="At Joe & The Juice I advanced quickly from team Member to store manager in 3 months, leading a 40-person team at Victoria. After two years I joined the SWAT Team, handling store launches, manager training, and turnaround projects across multiple locations. This role sharpened my leadership, training, problem-solving, and cross-team collaboration — skills directly transferable to complex software projects."
           />
         </div>

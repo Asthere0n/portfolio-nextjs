@@ -97,6 +97,16 @@ export const MatrixText = ({
         return () => clearTimeout(timer);
     }, []);
 
+    // Restart animation every 5 seconds after it finishes
+    useEffect(() => {
+        if (!isAnimating) {
+            const timer = setTimeout(() => {
+                startAnimation();
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [isAnimating, startAnimation]);
+
     const motionVariants = useMemo(
         () => ({
             matrix: {
@@ -120,7 +130,7 @@ export const MatrixText = ({
                     {letters.map((letter, index) => (
                         <motion.div
                             key={`${index}-${letter.char}`}
-                            className="font-mono text-5xl w-[1ch] text-center overflow-hidden"
+                            className="text-5xl w-[1ch] text-center overflow-hidden"
                             initial="initial"
                             animate={letter.isMatrix ? "matrix" : "normal"}
                             variants={motionVariants}

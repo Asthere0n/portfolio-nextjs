@@ -1,9 +1,8 @@
 import React from 'react'
 import { MatrixText } from '../ui/matrix-text'
-import { FlickeringGrid } from '../ui/flickering-grid'
+import { motion } from 'framer-motion'
 
 export default function Welcome() {
-  // TODO: Animate the yellow span to transition from white to yellow
   return (
     <div className='flex flex-col justify-center items-center w-full h-[100dvh] overflow-hidden'>
       <div className='flex justify-center items-center w-full'>
