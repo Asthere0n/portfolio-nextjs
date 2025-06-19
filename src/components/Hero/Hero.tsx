@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ContactLinks from '../ContactLinks/ContactLinks'
 import SpainFlag from '../../../public/icons/SpainFlag'
 import UKFlag from '../../../public/icons/UKFlag'
+import EmploymentStatus from '../Contact/EmploymentStatus/EmploymentStatus'
 
 export default function Hero() {
   return (
@@ -12,10 +13,11 @@ export default function Hero() {
       </div>
       <div className='flex flex-col gap-8 items-start p-12'>
         <h2 className='text-5xl p-5'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
-        <div className='flex gap-5 px-5 items-center'>
+        <div className='flex gap-4 px-5 items-center'>
           <SpainFlag className='w-12' />
           <UKFlag className='w-12' />
-          <h3 className='text-white text-3xl'>Bilingual | <span className='text-xl text-green-400 p-3 border-2 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:font-weight-bold'>LOOKING FOR WORK</span></h3>
+          <h3 className='text-white text-3xl'>Bilingual | </h3>
+          <EmploymentStatus />
         </div>
         <p className='text-lg p-5 text-justify text-white w-[55ch]'>
           A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.

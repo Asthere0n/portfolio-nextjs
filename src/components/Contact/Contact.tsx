@@ -1,15 +1,13 @@
 import React from 'react'
+import ContactLinks from '../ContactLinks/ContactLinks'
+import EmploymentStatus from './EmploymentStatus/EmploymentStatus'
 
 export default function Contact() {
   return (
-    <div>
-      <h2><span className='text-green-400 border-2 border-green-400 rounded-md p-2'>AVAILABLE TO WORK </span> If you've got this far you owe me a call</h2>
-      <ul>
-        <li>Github</li>
-        <li>LinkedIn</li>
-        <li>Download CV</li>
-        <li>Email</li>
-      </ul>
+    <div className='h-150 bg-slate-800 w-full flex flex-col justify-around items-center'>
+      <EmploymentStatus/>
+      <h2 className='text-3xl'> If you've got this far, I think you owe me a call</h2>
+      <ContactLinks/>
     </div>
   )
 }
