@@ -138,7 +138,7 @@ export function ExpandableCard() {
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-6 flex flex-col bg-slate-600 shadow-xl hover:shadow-2xl hover:bg-slate-800 rounded-xl cursor-pointer h-108"
+            className="p-6 flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer h-108"
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -153,7 +153,7 @@ export function ExpandableCard() {
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-yellow-400 text-center md:text-left text-base"
+                  className="font-medium text-yellow-400 text-center text-xl"
                 >
                   {card.title}
                 </motion.h3>

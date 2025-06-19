@@ -7,7 +7,9 @@ import UKFlag from '../../../public/icons/UKFlag'
 export default function Hero() {
   return (
     <div className='w-full h-[100dvh] flex justify-center items-center px-8 bg-slate-700 border-y-4 border-slate-500'>
-      <Image src="/Portrait.webp" height={500} width={500} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-full h-90 w-90 m-15 scale-x-[-1]' />
+      <div className="w-[370px] h-[370px] bg-conic-0 from-slate-700 via-amber-500 to-yellow-400 flex justify-center items-center rounded-full animate-spin" style={{ animationDuration: '4s' }}>
+        <Image src="/Portrait.webp" height={500} width={500} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-full h-90 w-90 m-15 scale-x-[-1] spin-reverse animate-spin' style={{ animationDuration: '4s' }} />
+      </div>
       <div className='flex flex-col gap-8 items-start p-12'>
         <h2 className='text-5xl p-5'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
         <div className='flex gap-5 px-5 items-center'>

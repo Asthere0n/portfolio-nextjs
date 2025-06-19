@@ -39,7 +39,7 @@ export default function Moving(props: Props) {
         setShakeDest(true);
         setTimeout(() => {
           setShakeDest(false);
-          loop = setTimeout(animate, 2000);
+          loop = setTimeout(animate, 1900);
         }, 500);
       }, duration * 0.6);
     };
@@ -60,7 +60,7 @@ export default function Moving(props: Props) {
       </div>
       <div
         className={`${styles.plane} ${styles.animate}`}
-        style={{ animationDuration: `${duration}ms` }} // <-- Add this line
+        style={{ animationDuration: `${duration}ms` }}
       >
         <Plane />
       </div>
