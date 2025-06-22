@@ -73,66 +73,82 @@ export function ExpandableCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[900px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll overflow-x-hidden"
+              className="w-full max-w-[900px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll overflow-x-hidden"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
+              <img
+                width={200}
+                height={200}
+                src={active.src}
+                alt={active.title}
+                className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+              />
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-yellow-400 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-slate-200 text-base font-bold"
-                    >
-                      {active.description}
-                    </motion.p>
-                  </div>
+              <div className="flex justify-between items-start p-4">
+                <div className="">
+                <motion.h3
+                  layoutId={`title-${active.title}-${id}`}
+                  className="font-medium text-yellow-400 text-base"
+                >
+                  {active.title}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${active.description}-${id}`}
+                  className="text-slate-200 text-base font-bold"
+                >
+                  {active.description}
+                </motion.p>
+                </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                <motion.a
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                href={active.ctaLink}
+                target="_blank"
+                className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                >
+                {active.ctaText}
+                </motion.a>
+              </div>
+              <div className="pt-4 relative px-4">
+                <motion.div
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 1 }}
+                className="text-slate-200 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto"
+                style={{
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                  WebkitOverflowScrolling: "touch",
+                }}
+                >
+                {/* Hide scrollbar for Webkit browsers */}
+                <style>
+                  {`
+                  .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                  }
+                  `}
+                </style>
+                <div className="hide-scrollbar w-full h-full">
+                  {typeof active.content === "function"
+                  ? active.content()
+                  : active.content}
                 </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 1 }}
-                    className="text-slate-200 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
-                  >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                  </motion.div>
-                </div>
+                </motion.div>
+              </div>
               </div>
             </motion.div>
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-[90%] mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-4">
+      <ul className="max-w-[90%] mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -140,20 +156,21 @@ export function ExpandableCard() {
             onClick={() => setActive(card)}
             className="p-6 flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer h-108"
           >
-            <div className="flex gap-4 flex-col  w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+            <div className="flex gap-4 flex-col h-full w-full">
+                <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
+                  className="aspect-square h-60 w-full rounded-lg object-cover object-top"
+                  style={{ aspectRatio: "1 / 1" }}
                 />
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
+                </motion.div>
+              <div className="flex justify-center items-start lg:items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-yellow-400 text-center text-xl"
+                  className="font-medium text-yellow-400 text-center text-2xl"
                 >
                   {card.title}
                 </motion.h3>
