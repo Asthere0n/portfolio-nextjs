@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import cards from "./cards/cards";
+import TechPills from "./TechPills/TechPills";
 
 export function ExpandableCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -156,21 +157,21 @@ export function ExpandableCard() {
             onClick={() => setActive(card)}
             className="p-6 flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer h-108"
           >
-            <div className="flex gap-4 flex-col h-full w-full">
+            <div className="flex gap-4 flex-col lg:flex-row h-full w-full">
                 <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="aspect-square h-60 w-full rounded-lg object-cover object-top"
+                  className="aspect-square h-60 w-full lg:h-full rounded-lg object-cover object-top"
                   style={{ aspectRatio: "1 / 1" }}
                 />
                 </motion.div>
-              <div className="flex justify-center items-start lg:items-center flex-col">
+              <div className="flex justify-center items-start flex-col gap-8">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-yellow-400 text-center text-2xl"
+                  className="font-medium text-yellow-400 text-center lg:text-left text-2xl"
                 >
                   {card.title}
                 </motion.h3>
@@ -180,6 +181,9 @@ export function ExpandableCard() {
                 >
                   {card.description}
                 </motion.p>
+                <motion.div layoutId={`pills-${card.title}-${id}`}>
+                  <TechPills pills={card.stack} />
+                </motion.div>
               </div>
             </div>
           </motion.div>

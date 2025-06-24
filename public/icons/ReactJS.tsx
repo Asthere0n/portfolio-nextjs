@@ -4,7 +4,7 @@ const ReactJS = (props: SVGProps<SVGSVGElement>) => (
     <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        fill="#ffffff"
+        fill="currentColor"
         stroke="#ffffff"
         strokeWidth={0.00024}
         {...props}

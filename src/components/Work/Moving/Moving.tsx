@@ -23,7 +23,6 @@ export default function Moving(props: Props) {
   const [shakeOrigin, setShakeOrigin] = useState(false);
   const [shakeDest, setShakeDest] = useState(false);
 
-  // Change this variable to modify the duration of the plane fly animation (in ms)
   const duration = 6000;
 
   useEffect(() => {

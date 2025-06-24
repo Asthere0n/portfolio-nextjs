@@ -7,7 +7,7 @@ import EmploymentStatus from '../Contact/EmploymentStatus/EmploymentStatus'
 
 export default function Hero() {
   return (
-    <div className='w-screen min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center p-8 bg-slate-700 border-y-4 border-slate-500'>
+    <div className='w-screen min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center p-8 bg-slate-700 border-y-4 border-slate-500 overflow-x-hidden'>
       <div className="w-[374px] h-[374px] bg-gradient-to-b from-slate-700 via-amber-600 to-yellow-400 flex justify-center items-center rounded-full animate-spin" style={{ animationDuration: '6s' }}>
         <Image src="/Portrait.webp" height={500} width={500} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-full h-90 w-90 m-15 scale-x-[-1] spin-reverse animate-spin' style={{ animationDuration: '6s' }} />
       </div>

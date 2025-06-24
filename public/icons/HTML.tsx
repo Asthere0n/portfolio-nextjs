@@ -1,6 +1,6 @@
 import React from "react";
 
-const HTMLLogo: React.FC = () => (
+const HTMLLogo: React.FC = (props) => (
     <svg
         fill="currentColor"
         height={32}
@@ -10,6 +10,7 @@ const HTMLLogo: React.FC = () => (
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 512 512"
         stroke="currentColor"
+        {...props}
     >
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
