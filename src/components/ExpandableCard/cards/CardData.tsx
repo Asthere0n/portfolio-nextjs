@@ -148,7 +148,7 @@ const cards = [
     },
     {
         description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
-        stack: ["html", "css", "typescript"],
+        stack: ["html", "css", "typescript", "nextjs", "mongodb"],
         title: "Paper Dragon",
         src: "/img/paper-dragon.svg",
         ctaText: "In progress",

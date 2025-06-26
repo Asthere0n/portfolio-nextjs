@@ -1,6 +1,6 @@
 import React from 'react'
 
-// Import your icon components
+// Components
 import HTML from '../../../../public/icons/HTML'
 import CSS from '../../../../public/icons/CSS'
 import JavaScript from '../../../../public/icons/JavaScript'
@@ -8,13 +8,17 @@ import ReactJS from '../../../../public/icons/ReactJS'
 import TailwindCSS from '../../../../public/icons/TailwindCSS'
 import TypeScript from '../../../../public/icons/TypeScript'
 import Linux from '../../../../public/icons/Linux'
+import Nodejs from '../../../../public/icons/Nodejs'
+import MongoDB from '../../../../public/icons/MongoDB'
+import Nextjs from '../../../../public/icons/Nextjs'
 
+// Typing
 interface Props {
     title: string,
     pills: string[]
 }
 
-// Map pill names to icon components
+// Mapping pill names to icon components
 const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     html: HTML,
     css: CSS,
@@ -22,10 +26,14 @@ const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     typescript: TypeScript,
     react: ReactJS,
     tailwind: TailwindCSS,
-    linux: Linux
+    linux: Linux,
+    nodejs: Nodejs,
+    mongodb: MongoDB,
+    nextjs: Nextjs
 }
 
 function technologyStyle(title: string) {
+    // Styles
     switch (title) {
         case "html":
             return "bg-amber-500 text-white"
@@ -39,7 +47,7 @@ function technologyStyle(title: string) {
         case "react":
             return "bg-cyan-300 text-black"
         
-        case "next":
+        case "nextjs":
             return "bg-black text-white"
         
         case "typescript":
@@ -47,6 +55,12 @@ function technologyStyle(title: string) {
         
         case "linux":
             return "bg-white text-black"
+        
+        case "nodejs":
+            return "bg-lime-600 text-white" 
+        
+        case "mongodb":
+            return "bg-green-400 text-white"
     }
 } 
 
@@ -54,9 +68,11 @@ export default function TechPills(props: Props) {
     return (
         <div className='flex gap-2 flex-wrap' key={`group-pills-${props.title}`}>
             {props.pills.map((pill) => {
+                // Pill
                 const Icon = iconMap[pill]
                 return Icon ? (
                     <div
+                        key={`pill-${pill}`}
                         className={`group h-10 w-10 rounded-md ${technologyStyle(pill)} flex justify-center items-center overflow-hidden hover:w-fit transition-all duration-700`}
                     >
                         <Icon key={`icon-${props.title}-${pill}`} className="h-8 w-8 m-2 flex-shrink-0" />
