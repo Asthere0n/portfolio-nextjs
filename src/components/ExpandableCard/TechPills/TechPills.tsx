@@ -10,6 +10,7 @@ import TypeScript from '../../../../public/icons/TypeScript'
 import Linux from '../../../../public/icons/Linux'
 
 interface Props {
+    title: string,
     pills: string[]
 }
 
@@ -51,17 +52,17 @@ function technologyStyle(title: string) {
 
 export default function TechPills(props: Props) {
     return (
-        <div className='flex gap-2 flex-wrap'>
+        <div className='flex gap-2 flex-wrap' key={`group-pills-${props.title}`}>
             {props.pills.map((pill) => {
-                const Icon = iconMap[pill.toLowerCase()]
+                const Icon = iconMap[pill]
                 return Icon ? (
                     <div
                         className={`group h-10 w-10 rounded-md ${technologyStyle(pill)} flex justify-center items-center overflow-hidden hover:w-fit transition-all duration-700`}
                     >
-                        <Icon key={pill} className="h-8 w-8 m-2 flex-shrink-0" />
+                        <Icon key={`icon-${props.title}-${pill}`} className="h-8 w-8 m-2 flex-shrink-0" />
                         <p
-                            className="
-                                opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:mx-4 transition-all duration-200 whitespace-nowrap overflow-hidden text-lg font-bold"
+                            className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:mx-4 transition-all duration-200 whitespace-nowrap overflow-hidden text-lg font-bold"
+                            key={`label-${pill}`}
                         >
                             {pill.toUpperCase()}
                         </p>

@@ -29,15 +29,15 @@ export default function Stack() {
             <div className='my-8 lg:m-8'>
                 <h3 className='text-4xl mb-8 text-slate-200'>Other <span className='text-yellow-400'>Technologies</span></h3>
                 <ul  className='grid grid-cols-3'>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black '><JavaScript/> JavaScript</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-cyan-700 text-white'><TailwindCSS/> Tailwind</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-black'><Nextjs/> NextJS</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-gray-900'><GitHub/> GitHub</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-blue-600 text-white'><PostgreSQL/> PostgreSQL</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-cyan-600 text-white'><MySQL/> MySQL</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-amber-500'><HTML/> HTML</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-violet-600'><CSS/> CSS</li>
-                    <li className='font-bold h-32 w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black'><Miro/> Miro</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black '><JavaScript/> JavaScript</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-cyan-700 text-white'><TailwindCSS/> Tailwind</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-black'><Nextjs/> NextJS</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-gray-900'><GitHub/> GitHub</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-blue-600 text-white'><PostgreSQL/> PostgreSQL</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-cyan-600 text-white'><MySQL/> MySQL</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-amber-500'><HTML/> HTML</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-violet-600'><CSS/> CSS</li>
+                    <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black'><Miro/> Miro</li>
                 </ul>
             </div>
         </div>
