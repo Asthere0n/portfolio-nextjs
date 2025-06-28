@@ -74,16 +74,16 @@ export function ExpandableCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full md:max-w-[90%] h-full md:h-fit flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll overflow-x-hidden"
+              className="w-full md:max-w-[90%] max-h-screen md:h-fit flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll overflow-x-hidden"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-120 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
@@ -98,7 +98,7 @@ export function ExpandableCard() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-slate-200 text-xl font-bold mb-2"
+                      className="text-slate-200 text-xl font-bold my-6"
                     >
                       {active.description}
                     </motion.p>
@@ -132,7 +132,6 @@ export function ExpandableCard() {
                       WebkitOverflowScrolling: "touch",
                     }}
                   >
-                    {/* Hide scrollbar for Webkit browsers */}
                     <style>
                       {`
                   .hide-scrollbar::-webkit-scrollbar {
@@ -152,16 +151,16 @@ export function ExpandableCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-[90%] mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
+      <ul className="max-w-[90%] mx-auto w-full flex flex-col items-start gap-6">
         {CardData.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-6 flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer"
+            className="p-6 w-full flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col items-center lg:flex-row h-full w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+              <motion.div layoutId={`image-${card.title}-${id}`} className="w-[300px] h-[300px] rounded-lg">
                 <img
                   width={300}
                   height={300}
@@ -179,7 +178,7 @@ export function ExpandableCard() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-white w-full text-left text-base"
+                  className="text-white w-full text-left text-xl font-semibold"
                 >
                   {card.description}
                 </motion.p>

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Nextjs: React.FC = () => (
-    <svg viewBox="0 0 15 15" fill="none" height={32} width={32} xmlns="http://www.w3.org/2000/svg">
+const Nextjs: React.FC = (props) => (
+    <svg viewBox="0 0 15 15" fill="none" height={32} width={32} xmlns="http://www.w3.org/2000/svg" {...props}>
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
         <g id="SVGRepo_iconCarrier">

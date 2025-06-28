@@ -5,7 +5,7 @@ const cards = [
         description: "A web tool that simplifies expiry date calculations for perishable products",
         title: "DayDot",
         stack: ["html", "css", "javascript", "react"],
-        src: "/img/Daydot.jpg",
+        src: "/img/Daydot.png",
         ctaText: "Visit",
         ctaLink: "https://day-dot.vercel.app/",
         ctaStyle: "bg-green-500",
@@ -15,10 +15,10 @@ const cards = [
                     title={this.title}
                     description="In hospitality, perishable products often require individual DayDot stickers with varying shelf lives. Staff frequently struggle to calculate correct expiry dates across different products, leading to potential waste, mistakes, or health risks. I built DayDot to simplify and automate these calculations, improving accuracy and efficiency."
                     keyFeatures={[
+                        "Mobile-friendly responsive design, with a mobile-first approach",
                         "Simple, intuitive UI for staff with no technical background",
                         "Customizable and easily expandable product shelf-life database",
                         "Dynamic date calculations based on shelf-life rules",
-                        "Mobile-friendly responsive design, with a mobile-first approach",
                         "Fully client-side app — no backend required",
                         "Fast deployment via Vercel hosting"
                     ]}
@@ -41,7 +41,7 @@ const cards = [
         description: "Game based on the Knight in chess, against an AI using pathfinding algorythms",
         stack: ["html", "css", "javascript"],
         title: "E-Knight-ma",
-        src: "/img/ChessKnight.webp",
+        src: "/img/EKnightMa.png",
         ctaText: "Visit",
         ctaLink: "https://ui.aceternity.com/templates",
         ctaStyle: "bg-green-500",
@@ -76,7 +76,7 @@ const cards = [
         description: "A task management tool with full CRUD functionality",
         title: "Task-Tracker",
         stack: ["html", "css", "javascript", "nodejs", "mongodb"],
-        src: "/img/task-list.png",
+        src: "/img/TaskTracker.png",
         ctaText: "GitHub",
         ctaLink: "https://github.com/Asthere0n/Task-Tracker",
         ctaStyle: "bg-yellow-600",
@@ -148,9 +148,9 @@ const cards = [
     },
     {
         description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
-        stack: ["html", "css", "typescript", "nextjs", "mongodb"],
+        stack: ["html", "tailwind", "typescript", "nextjs", "mongodb"],
         title: "Paper Dragon",
-        src: "/img/paper-dragon.svg",
+        src: "/img/paper-dragon.png",
         ctaText: "In progress",
         ctaLink: "#",
         ctaStyle: "bg-yellow-600",
@@ -184,9 +184,9 @@ const cards = [
     },
     {
         description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
-        stack: ["html", "css", "typescript", "nextjs"],
+        stack: ["html", "tailwind", "typescript", "nextjs"],
         title: "Personal Portfolio",
-        src: "/img/paper-dragon.svg",
+        src: "/img/portfolio.png",
         ctaText: "Visit",
         ctaLink: "#",
         ctaStyle: "bg-green-500",

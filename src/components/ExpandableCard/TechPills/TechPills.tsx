@@ -29,7 +29,7 @@ const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     linux: Linux,
     nodejs: Nodejs,
     mongodb: MongoDB,
-    nextjs: Nextjs
+    nextjs: Nextjs,
 }
 
 function technologyStyle(title: string) {
@@ -61,6 +61,9 @@ function technologyStyle(title: string) {
         
         case "mongodb":
             return "bg-green-400 text-white"
+        
+        case "tailwind":
+            return "bg-cyan-400 text-white"
     }
 } 
 
@@ -73,11 +76,11 @@ export default function TechPills(props: Props) {
                 return Icon ? (
                     <div
                         key={`pill-${pill}`}
-                        className={`group h-10 w-10 rounded-md ${technologyStyle(pill)} flex justify-center items-center overflow-hidden hover:w-fit transition-all duration-700`}
+                        className={`group relative h-10 w-10 rounded-md ${technologyStyle(pill)} flex justify-center items-center overflow-hidden transition-[width] duration-400 ease-in hover:justify-start hover:w-48`}
                     >
                         <Icon key={`icon-${props.title}-${pill}`} className="h-8 w-8 m-2 flex-shrink-0" />
                         <p
-                            className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:mx-4 transition-all duration-200 whitespace-nowrap overflow-hidden text-lg font-bold"
+                            className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:mx-4 transition-all duration-400 whitespace-nowrap overflow-hidden text-lg font-bold"
                             key={`label-${pill}`}
                         >
                             {pill.toUpperCase()}
