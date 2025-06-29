@@ -6,6 +6,7 @@ interface SlideData {
   title: string;
   description: string;
   button: string;
+  link: string;
   src: string;
 }
 
@@ -63,13 +64,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title, description } = slide;
+  const { src, button, title, description, link } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[50vmin] h-[70vmin] mx-[3vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[80vmin] h-[90vmin] md:w-[50vmin] md:h-[70vmin] mx-2 md:mx-[5vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -116,13 +117,18 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           className={`w-full h-full relative p-[4vmin] flex flex-col justify-end transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
         >
-          <div className="flex justify-around items-center mb-4">
-            <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold  relative">
               {title}
             </h2>
-              <button className="px-4 py-2 w-fit mx-auto sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 w-fit sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+                >
                 {button}
-              </button>
+                </a>
           </div>
             <p className="text-left">{description}</p>
             <div className="flex justify-center">
@@ -183,7 +189,7 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[50vmin] h-[70vmin] mx-auto"
+      className="relative w-[80vmin] h-[90vmin] md:w-[50vmin] md:h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
