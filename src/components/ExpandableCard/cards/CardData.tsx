@@ -183,7 +183,7 @@ const cards = [
         },
     },
     {
-        description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
+        description: "The portfolio you’re exploring right now — a fully responsive, accessible, and animated site built to showcase my journey as a full-stack developer.",
         stack: ["html", "tailwind", "typescript", "nextjs"],
         title: "Personal Portfolio",
         src: "/img/portfolio.png",
@@ -196,23 +196,21 @@ const cards = [
                     title={this.title}
                     description="Building and managing Dungeons & Dragons characters often involves scattered tools, manual tracking, and disorganized character sheets. Paper Dragon aims to centralize character creation, customization, and storage while providing a beautiful, comic-style interface and long-term extensibility."
                     keyFeatures={[
-                        "Full user authentication via Clerk for secure profiles",
-                        "MongoDB database integration to persist and manage character data",
-                        "Creative Commons SRD 5.1 integration for rules, abilities, classes, spells, and other D&D data",
-                        "Comic-inspired visual design using ShadCN components and custom styling",
-                        "Character Sheet builder with real-time data validation"
+                        "Custom wireframe and layout design based on UX best practices",
+                        "Fully responsive design across mobile, tablet, and desktop",
+                        "Clean, readable visual hierarchy and consistent color scheme",
+                        "Motion-enhanced UI using Framer Motion for smooth transitions",
+                        "Accessibility-conscious components and keyboard navigation",
+                        "Optimized for recruiter scanning and fast navigation"
                     ]}
                     challenges={[
-                        "Challenge 1: Scaling up to a much larger, more complex project than previous personal builds. /n Solution: Carefully planning project architecture, breaking down features into smaller milestones, and continuously refactoring code for maintainability.",
-                        "Challenge 2: Handling dynamic data structures for complex character data while preserving flexibility. /n Solution: Designing robust MongoDB schemas that can adapt to different classes, abilities, and customization options.",
-                        "Challenge 3: Balancing creative design vision with functional UI/UX best practices. /n Solution: Leveraging ShadCN’s component library for consistency while adding custom comic-style visual elements for personality."
+                        "Challenge 1: Making sure the site worked seamlessly across all screen sizes. /n Solution: Built mobile-first and tested extensively using Tailwind's responsive utilities.",
+                        "Challenge 2: Implementing smooth animations without sacrificing performance. /n Solution: Used Framer Motion to create performant, interruptible transitions that enhance UX without delay."
                     ]}
                     takeaways={[
-                        "Gained practical experience in full-stack architecture with NextJS and MongoDB",
-                        "Strengthened API design, dynamic routing, and backend/frontend data synchronization",
-                        "Integrated complex third-party services (Clerk authentication, SRD data parsing)",
-                        "Learned to plan long-term feature roadmaps for scalable projects",
-                        "Improved version control practices on Git for managing larger codebases"
+                        "Deepened my understanding of responsive and accessible UI design",
+                        "Learned how to present content with both developers and non-technical recruiters in mind",
+                        "Practiced balancing visual polish with code performance and structure"
                     ]}
                 />
             );
