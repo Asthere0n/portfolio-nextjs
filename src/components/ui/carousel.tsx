@@ -83,7 +83,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-2xl overflow-hidden transition-all duration-150 ease-out "
+          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-4xl overflow-hidden transition-all duration-150 ease-out shadow-2xl shadow-black"
           style={{
             transform:
               current === index
@@ -114,7 +114,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`w-full h-full relative p-[4vmin] flex flex-col justify-end transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
+          className={`w-full h-full relative p-[4vmin] flex flex-col border-4 border-black rounded-4xl justify-end transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
         >
           <div className="flex justify-between items-center mb-4">
@@ -152,7 +152,7 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-slate-800 border-3 border-transparent rounded-full focus:border-yellow-600 focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
+      className={`w-10 h-10 flex items-center mx-2 justify-center bg-slate-800 border-3 border-slate-700 rounded-xl focus:border-yellow-600 focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
         }`}
       title={title}
       onClick={handleClick}

@@ -13,8 +13,8 @@ export default function Hero() {
       </div>
       <div className='flex flex-col gap-8 justify-center items-center md:items-start md:p-12 mt-8 md:m-0'>
         <h2 className='text-4xl p-5 w-full'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
-        <div className='flex flex-col md:flex-row gap-4 px-5 items-center'>
-          <div className='flex gap-2 items-center'>
+        <div className='flex flex-col md:flex-row gap-4 items-center bg-slate-900 rounded-2xl p-8 border-2 border-slate-800'>
+          <div className='flex gap-2 items-center '>
             <SpainFlag className='w-12' />
             <UKFlag className='w-12' />
             <h3 className='text-white text-3xl'>Bilingual </h3>
