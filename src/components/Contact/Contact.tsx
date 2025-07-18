@@ -4,7 +4,7 @@ import EmploymentStatus from './EmploymentStatus/EmploymentStatus'
 
 export default function Contact() {
   return (
-    <div className='min-h-200 bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden'
+    <div className='min-h-160 bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden'
       style={{
       backgroundImage: `
       linear-gradient(
@@ -22,7 +22,7 @@ export default function Contact() {
       <div className='flex flex-col p-8 gap-4 items-center justify-center w-[90%] md:w-[50%] h-fit md:mx-8 rounded-2xl border-4 border-slate-500'
       style={{ backgroundColor: 'rgba(2, 6, 23, 0.85)' }}>
       <EmploymentStatus />
-      <h2 className='text-3xl'> If you've got this far, I think you shoudl give me a call</h2>
+      <h2 className='text-3xl'> If you've got this far, I think you should give me a call</h2>
       <ContactLinks />
       </div>
     </div>
