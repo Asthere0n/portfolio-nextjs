@@ -8,12 +8,12 @@ import EmploymentStatus from '../Contact/EmploymentStatus/EmploymentStatus'
 export default function Hero() {
   return (
     <div className='w-screen min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center p-8 bg-slate-700 border-y-4 border-slate-500 overflow-x-hidden'>
-      <div className="w-[374px] h-[374px] bg-gradient-to-b from-slate-700 via-amber-600 to-yellow-400 flex justify-center items-center rounded-full animate-spin" style={{ animationDuration: '6s' }}>
-        <Image src="/Portrait.webp" height={500} width={500} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-full h-90 w-90 m-15 scale-x-[-1] spin-reverse animate-spin' style={{ animationDuration: '6s' }} />
+      <div className="w-[400px] h-[550px] bg-gradient-to-b from-slate-800 to-yellow-400 flex justify-center items-center rounded-4xl ">
+        <Image src="/img/Portrait.webp" height={600} width={600} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-3xl h-[530px] w-full max-w-[300px] md:w-[400px] md:m-15 scale-x-[-1.2]' />
       </div>
       <div className='flex flex-col gap-8 justify-center items-center md:items-start md:p-12 mt-8 md:m-0'>
         <h2 className='text-4xl p-5 w-full'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
-        <div className='flex flex-col md:flex-row gap-4 items-center bg-slate-900 rounded-2xl p-8 border-2 border-slate-800'>
+        <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900 rounded-2xl p-8 border-2 border-slate-800 w-full'>
           <div className='flex gap-2 items-center '>
             <SpainFlag className='w-12' />
             <UKFlag className='w-12' />
