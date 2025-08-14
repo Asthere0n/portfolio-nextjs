@@ -14,39 +14,59 @@ function getStyle(content: number) {
 
 export default function WorldMap() {
     return (
+        
         <div
-            className="absolute inset-0 flex justify-center items-center overflow-hidden z-[-1]"
+            className="absolute flex inset-0 justify-center overflow-hidden w-[100dvw] items-center z-[-1]"
             style={{ width: "100vw", height: "100vh" }}
         >
-            <svg
-            width={mapData[0].length * CELL_SIZE}
-            height={mapData.length * CELL_SIZE}
-            className="flex justify-around items-center"
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100vw",
+                    height: "100vh",
+                    overflow: "hidden",
+                    position: "relative",
+                }}
             >
-            {mapData.map((row, rowIndex) => {
-                if (row.length !== 124) {
-                console.log(`Row ${rowIndex + 1}: ${row.length} elements`)
-                }
-                return row.map((cell, cellIndex) => {
-                const randomContent = Math.random()
-                const styles = getStyle(cell)
-                return (
-                    <text
-                    key={`${rowIndex}-${cellIndex}`}
-                    x={cellIndex * CELL_SIZE + CELL_SIZE / 2}
-                    y={rowIndex * CELL_SIZE + CELL_SIZE / 2}
-                    fontSize="18"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fill={styles.fill}
-                    fontWeight={styles.fontWeight}
-                    >
-                    {Math.round(randomContent)}
-                    </text>
-                )
-                })
-            })}
-            </svg>
+                <svg
+                    width={mapData[0].length * CELL_SIZE}
+                    height={mapData.length * CELL_SIZE}
+                    style={{
+                        display: "block",
+                        position: "absolute",
+                        left: "50%",
+                        top: "50%",
+                        transform: "translate(-50%, -50%)",
+                    }}
+                    className="flex justify-around items-center"
+                >
+                    {mapData.map((row, rowIndex) => {
+                        if (row.length !== 124) {
+                            console.log(`Row ${rowIndex + 1}: ${row.length} elements`)
+                        }
+                        return row.map((cell, cellIndex) => {
+                            const randomContent = Math.random()
+                            const styles = getStyle(cell)
+                            return (
+                                <text
+                                    key={`${rowIndex}-${cellIndex}`}
+                                    x={cellIndex * CELL_SIZE + CELL_SIZE / 2}
+                                    y={rowIndex * CELL_SIZE + CELL_SIZE / 2}
+                                    fontSize="18"
+                                    textAnchor="middle"
+                                    dominantBaseline="middle"
+                                    fill={styles.fill}
+                                    fontWeight={styles.fontWeight}
+                                >
+                                    {Math.round(randomContent)}
+                                </text>
+                            )
+                        })
+                    })}
+                </svg>
+            </div>
         </div>
     )
 }

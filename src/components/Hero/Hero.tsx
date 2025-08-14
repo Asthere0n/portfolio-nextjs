@@ -8,23 +8,27 @@ import EmploymentStatus from '../Contact/EmploymentStatus/EmploymentStatus'
 export default function Hero() {
   return (
     <div className='w-screen min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center p-8 bg-slate-700 border-y-4 border-slate-500 overflow-x-hidden'>
-      <div className="w-[400px] h-[550px] bg-gradient-to-b from-slate-800 to-yellow-400 flex justify-center items-center rounded-4xl ">
-        <Image src="/img/Portrait.webp" height={600} width={600} alt='Portrait of a beatiful Spanish full-stack developer' className='rounded-3xl h-[530px] w-full max-w-[300px] md:w-[400px] md:m-15 scale-x-[-1.2]' />
-      </div>
+      <Image
+      src='/img/Portrait.webp'
+      alt='beatiful Spanish developer'
+      height={600}
+      width={600}
+      className='w-[300px] md:w-[600px] rounded-3xl mt-12 border-yellow-400 border-4 scale-x-[-1] '
+      />
       <div className='flex flex-col gap-8 justify-center items-center md:items-start md:p-12 mt-8 md:m-0'>
-        <h2 className='text-4xl p-5 w-full'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
-        <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900 rounded-2xl p-8 border-2 border-slate-800 w-full'>
-          <div className='flex gap-2 items-center '>
-            <SpainFlag className='w-12' />
-            <UKFlag className='w-12' />
-            <h3 className='text-white text-3xl'>Bilingual </h3>
-          </div>
-          <EmploymentStatus />
+      <h2 className='text-4xl p-5 w-full'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
+      <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900 rounded-2xl p-8 border-2 border-slate-800 w-full'>
+        <div className='flex gap-2 items-center '>
+        <SpainFlag className='w-12' />
+        <UKFlag className='w-12' />
+        <h3 className='text-white text-3xl'>Bilingual </h3>
         </div>
-        <p className='text-lg p-5 text-justify text-white w-[30ch] md:w-[55ch]'>
-          A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.
-        </p>
-        <ContactLinks />
+        <EmploymentStatus />
+      </div>
+      <p className='text-lg p-5 text-justify text-white w-[30ch] md:w-[55ch]'>
+        A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.
+      </p>
+      <ContactLinks />
       </div>
     </div>
   )
