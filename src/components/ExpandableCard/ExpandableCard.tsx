@@ -74,38 +74,28 @@ export function ExpandableCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full md:max-w-[90%] max-h-screen md:h-fit flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll overflow-x-hidden"
+              className="w-full md:max-w-[90%] max-h-screen flex flex-col bg-slate-600 sm:rounded-3xl overflow-y-scroll"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div layoutId={`image-${active.title}-${id}`} className="w-full h-60 md:h-120">
                 <img
                   width={300}
                   height={300}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-120 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-60 md:h-120 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+                <div className="flex flex-col justify-between items-start p-4">
+                  <div className="flex justify-between w-full">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
                       className="font-medium text-yellow-400 text-4xl mb-2"
                     >
                       {active.title}
                     </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-slate-200 text-xl font-bold my-6"
-                    >
-                      {active.description}
-                    </motion.p>
-                    <TechPills title={`active-${active.title}`} pills={active.stack} />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <p className="font-bold">Status: </p>
                     <motion.a
                       layout
                       initial={{ opacity: 0 }}
@@ -117,7 +107,17 @@ export function ExpandableCard() {
                     >
                       {active.ctaText}
                     </motion.a>
-                  </div>
+                    </div>
+                    <motion.p
+                      layoutId={`description-${active.description}-${id}`}
+                      className="text-slate-200 text-xl font-bold my-6"
+                    >
+                      {active.description}
+                    </motion.p>
+                    <TechPills title={`active-${active.title}`} pills={active.stack} />
+                    <div className="flex items-center gap-2">
+                    </div>
+                    
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -125,7 +125,7 @@ export function ExpandableCard() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 1 }}
-                    className="text-slate-200 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto"
+                    className="text-slate-200 text-xs md:text-sm lg:text-base h-40 h-fit pb-10 flex flex-col items-start gap-4 overflow-auto"
                     style={{
                       scrollbarWidth: "none",
                       msOverflowStyle: "none",
@@ -155,7 +155,7 @@ export function ExpandableCard() {
         {CardData.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
-            key={index+card.title}
+            key={index + card.title}
             onClick={() => setActive(card)}
             className="p-6 w-full flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer"
           >
@@ -169,7 +169,7 @@ export function ExpandableCard() {
                   className="w-full md:w-[300px] h-[300px] rounded-xl object-cover"
                 />
               </motion.div>
-              <div className="w-[70%] flex justify-center items-start flex-grow-1 flex-col gap-8">
+              <div className="w-[90%] flex justify-center items-start flex-grow-1 flex-col gap-8">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
                   className="font-medium text-yellow-400 text-center lg:text-left text-3xl"
