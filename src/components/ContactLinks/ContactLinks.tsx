@@ -12,7 +12,11 @@ export default function ContactLinks() {
         <div className='w-fit grid grid-cols-2 md:flex justify-center items-center text-slate-200'>
             <ContactButton name='GitHub' link='https://github.com/Asthere0n' icon={<GitHub/>}/>
             <ContactButton name='LinkedIn' icon={<LinkedIn/>} link='https://www.linkedin.com/in/cristian-sanchez-c/'/>
-            <ContactButton name='CV' icon={<DownloadCV />} link='#' />
+            <ContactButton
+            name='CV'
+            icon={<DownloadCV />}
+            link='/CV Cristian Sanchez.pdf'
+            />
             <ContactButton name='Stirling' icon={<Location/>} link='https://maps.app.goo.gl/PzEiWN2L5JcAU6KX9'/>
         </div>
     )
