@@ -20,16 +20,19 @@ export default function WorkCard(props: Props) {
                     <div className={styles["flip-card-front"]}>
                         <div className='w-[300px] h-[400px] md:w-full md:h-full flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 p-6 rounded-2xl border-2 justify-around items-start border-slate-600 bg-slate-800 overflow-hidden'>
                             <div className=' flex justify-start items-center gap-4 col-start-1 col-end-4' >
-                                <Image src={props.src} alt='' width={40} height={40} className='rounded-sm'/>
-                                <p className='text-2xl font-bold'>{props.title}</p>
+                                <Image src={props.src} alt='' width={80} height={80} className='rounded-md' />
+                                <div className='flex flex-col items-start'>
+                                    <p className='text-2xl text-slate-300'>{props.company}</p>
+                                    <p className='text-2xl font-bold'>{props.title}</p>
+                                </div>
                             </div>
                             <div className='row-start-2 row-end-4 flex flex-col justify-center items-start h-full text-sm md:text-lg'>
-                                <p>{props.location}</p>
+                                <p className='font-semibold'>{props.location}</p>
                                 <p>{props.dates}</p>
                             </div>
                             <ul className='row-start-2 row-end-4 col-start-2 col-end-4 flex flex-col h-full gap-1 px-8 md:border-l-2 border-slate-600 justify-center items-start text-sm md:text-lg'>
                                 {props.responsabilities.map((resp, idx) => (
-                                    <li key={"id"+idx} className='list-disc text-left'>{resp}</li>
+                                    <li key={"id" + idx} className='list-disc text-left'>{resp}</li>
                                 ))}
                             </ul>
                         </div>

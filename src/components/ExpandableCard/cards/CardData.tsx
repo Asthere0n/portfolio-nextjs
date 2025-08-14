@@ -147,7 +147,41 @@ const cards = [
         },
     },
     {
-        description: "full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
+        description: "The portfolio you’re exploring right now — a fully responsive, accessible, and animated site built to showcase my journey as a full-stack developer.",
+        stack: ["html", "tailwind", "typescript", "nextjs"],
+        title: "Personal Portfolio",
+        src: "/img/portfolio.png",
+        ctaText: "Visit",
+        ctaLink: "#",
+        ctaStyle: "bg-green-500",
+        content: function () {
+            return (
+                <ExpandedCard
+                    title={this.title}
+                    description="Building and managing Dungeons & Dragons characters often involves scattered tools, manual tracking, and disorganized character sheets. Paper Dragon aims to centralize character creation, customization, and storage while providing a beautiful, comic-style interface and long-term extensibility."
+                    keyFeatures={[
+                        "Custom wireframe and layout design based on UX best practices",
+                        "Fully responsive design across mobile, tablet, and desktop",
+                        "Clean, readable visual hierarchy and consistent color scheme",
+                        "Motion-enhanced UI using Framer Motion for smooth transitions",
+                        "Accessibility-conscious components and keyboard navigation",
+                        "Optimized for recruiter scanning and fast navigation"
+                    ]}
+                    challenges={[
+                        "Challenge 1: Making sure the site worked seamlessly across all screen sizes. /n Solution: Built mobile-first and tested extensively using Tailwind's responsive utilities.",
+                        "Challenge 2: Implementing smooth animations without sacrificing performance. /n Solution: Used Framer Motion to create performant, interruptible transitions that enhance UX without delay."
+                    ]}
+                    takeaways={[
+                        "Deepened my understanding of responsive and accessible UI design",
+                        "Learned how to present content with both developers and non-technical recruiters in mind",
+                        "Practiced balancing visual polish with code performance and structure"
+                    ]}
+                />
+            );
+        },
+    },
+    {
+        description: "Full-stack web app to build, manage, and store Dungeons & Dragons characters with a bold comic-book aesthetic",
         stack: ["html", "tailwind", "typescript", "nextjs", "mongodb"],
         title: "Paper Dragon",
         src: "/img/paper-dragon.png",
@@ -182,40 +216,7 @@ const cards = [
             );
         },
     },
-    {
-        description: "The portfolio you’re exploring right now — a fully responsive, accessible, and animated site built to showcase my journey as a full-stack developer.",
-        stack: ["html", "tailwind", "typescript", "nextjs"],
-        title: "Personal Portfolio",
-        src: "/img/portfolio.png",
-        ctaText: "Visit",
-        ctaLink: "#",
-        ctaStyle: "bg-green-500",
-        content: function () {
-            return (
-                <ExpandedCard
-                    title={this.title}
-                    description="Building and managing Dungeons & Dragons characters often involves scattered tools, manual tracking, and disorganized character sheets. Paper Dragon aims to centralize character creation, customization, and storage while providing a beautiful, comic-style interface and long-term extensibility."
-                    keyFeatures={[
-                        "Custom wireframe and layout design based on UX best practices",
-                        "Fully responsive design across mobile, tablet, and desktop",
-                        "Clean, readable visual hierarchy and consistent color scheme",
-                        "Motion-enhanced UI using Framer Motion for smooth transitions",
-                        "Accessibility-conscious components and keyboard navigation",
-                        "Optimized for recruiter scanning and fast navigation"
-                    ]}
-                    challenges={[
-                        "Challenge 1: Making sure the site worked seamlessly across all screen sizes. /n Solution: Built mobile-first and tested extensively using Tailwind's responsive utilities.",
-                        "Challenge 2: Implementing smooth animations without sacrificing performance. /n Solution: Used Framer Motion to create performant, interruptible transitions that enhance UX without delay."
-                    ]}
-                    takeaways={[
-                        "Deepened my understanding of responsive and accessible UI design",
-                        "Learned how to present content with both developers and non-technical recruiters in mind",
-                        "Practiced balancing visual polish with code performance and structure"
-                    ]}
-                />
-            );
-        },
-    }
+
 ];
 
 export default cards

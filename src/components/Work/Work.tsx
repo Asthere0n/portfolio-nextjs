@@ -16,7 +16,7 @@ export function Work() {
           <WorkCard
             title="Supervisor"
             company="Costa Coffee"
-            dates="Feb-2025 ~ Jun-2025"
+            dates="Feb-25 ~ Jun-25"
             location="Stirling, UK"
             description="At Costa Coffee I led daily operations while applying my growing web development skills to real business problems. I built tools like the Task Manager and Day-Dot Maker to improve team efficiency and reduce errors. This role sharpened both my leadership and my ability to deliver practical software solutions in real work environments."
             src="/img/costa-coffee.jpg"
@@ -33,7 +33,7 @@ export function Work() {
             title="Sales Assistant"
             src="/img/ellies.jpeg"
             company="Ellie's cellar"
-            dates="April-2024 ~ Feb-2025"
+            dates="April-24 ~ Feb-25"
             location="Alva, UK"
             responsabilities={["Managed daily operations independently while working solo shifts", "Handled inventory checks and organized deliveries for multiple branches", "Completed end-of-day banking and shop closing procedures"]}
             description="At Ellie’s Cellar I balanced a part-time customer service while starting my journey into full-stack development. I worked independently, assisting customers, managing deliveries, handling banking, and overseeing daily operations alone."
@@ -53,7 +53,7 @@ export function Work() {
             src="/img/joe.png"
             location="London, UK"
             company="Joe & the Juice"
-            dates="Sept-2021 ~ Feb-2024"
+            dates="Sept-21 ~ Feb-24"
             responsabilities={[ "Managed teams of 40 staff with focus on training and performance","Became Store Manager in 3 months", "Selected for SWAT Team handling store openings & recovery projects", "Collaborated with Head office and area managers on high-priority assignments"]}
             description="At Joe & The Juice I advanced quickly from team Member to store manager in 3 months, leading a 40-person team at Victoria. After two years I joined the SWAT Team, handling store launches, manager training, and turnaround projects across multiple locations. This role sharpened my leadership, training, problem-solving, and cross-team collaboration — skills directly transferable to complex software projects."
           />
@@ -69,7 +69,7 @@ export function Work() {
             src="/img/pret.png"
             location="London, UK"
             company="Pret A Manger"
-            dates="April-2018 ~ March-2021"
+            dates="April-18 ~ March-21"
             responsabilities={["Built and maintained a strong local network with nearby store teams", "Optimized workflow and procedures in high-volume high-preassure environments", "Operated under high-pressure conditions in one of the UK’s busiest shops"]}
             description="At Pret A Manger I managed daily barista duties while also coordinating supply logistics between shops around King’s Cross. I built a strong network with nearby teams to ensure smooth operations. Working in one of the UK’s busiest locations taught me to optimize workflows, stay calm under pressure, and adapt quickly."
           />
@@ -86,7 +86,7 @@ export function Work() {
             src="/img/Lerche.jpg"
             location="Valencia, Spain"
             company="Grupo Lerche"
-            dates="Sept-2017 ~ April-2018"
+            dates="Sept-17 ~ April-18"
             responsabilities={["Conducted quality control inspections on LED display panels", "Performed diagnostic testing to identify hardware defects", "Documented technical reports for repair teams"]}
             description="At Grupo Lerche I installed and maintained LED advertising screens for football stadiums, including Valencia CF and Real Madrid. I specialized in quality control, using diagnostic tests to detect hardware defects, documenting issues, and ensuring all units met strict quality standards before shipment. This role strengthened my attention to detail, problem-solving, and technical troubleshooting — skills I now apply in software development."
           />

@@ -151,11 +151,11 @@ export function ExpandableCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-[90%] mx-auto mb-16 w-full flex flex-col items-start gap-6">
+      <ul className="max-w-[90%] mx-auto mb-16 w-full flex flex-col items-start gap-10">
         {CardData.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
-            key={card.title}
+            key={index+card.title}
             onClick={() => setActive(card)}
             className="p-6 w-full flex flex-col bg-slate-800 shadow-xl hover:shadow-2xl hover:bg-slate-600 rounded-xl cursor-pointer"
           >
@@ -169,7 +169,7 @@ export function ExpandableCard() {
                   className="w-full md:w-[300px] h-[300px] rounded-xl object-cover"
                 />
               </motion.div>
-              <div className="flex justify-center items-start flex-grow-1 flex-col gap-8">
+              <div className="w-[70%] flex justify-center items-start flex-grow-1 flex-col gap-8">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
                   className="font-medium text-yellow-400 text-center lg:text-left text-3xl"
@@ -178,7 +178,7 @@ export function ExpandableCard() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-white w-full text-left text-xl font-semibold"
+                  className="text-white w-[90%] text-left text-xl font-semibold"
                 >
                   {card.description}
                 </motion.p>
