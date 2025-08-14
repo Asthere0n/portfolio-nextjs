@@ -15,7 +15,7 @@ export default function Welcome() {
           letterInterval={100}
         />
       </div>
-      <h2 className='text-2xl text-slate-400 max-w-[80%] text-justify'>Making the world a better place, one commit at a time</h2>
+      <h2 className='text-xl lg:text-3xl text-slate-400 max-w-[80%] text-justify p-4 md:py-12 md:px-18 bg-slate-950'>Making the world a better place, one commit at a time</h2>
     </div>
   )
 }

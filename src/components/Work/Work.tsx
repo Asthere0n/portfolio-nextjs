@@ -55,7 +55,7 @@ export function Work() {
             company="Joe & the Juice"
             dates="Sept-21 ~ Feb-24"
             responsabilities={[ "Managed teams of 40 staff with focus on training and performance","Became Store Manager in 3 months", "Selected for SWAT Team handling store openings & recovery projects", "Collaborated with Head office and area managers on high-priority assignments"]}
-            description="At Joe & The Juice I advanced quickly from team Member to store manager in 3 months, leading a 40-person team at Victoria. After two years I joined the SWAT Team, handling store launches, manager training, and turnaround projects across multiple locations. This role sharpened my leadership, training, problem-solving, and cross-team collaboration — skills directly transferable to complex software projects."
+            description="At Joe & The Juice I advanced quickly from team Member to store manager in 3 months, leading a 40-person team at Victoria. After two years I joined the SWAT Team, handling store launches, manager training, and turnaround projects across multiple locations. This role sharpened my leadership, training, problem-solving, and cross-team collaboration."
           />
         </div>
       ),
@@ -88,7 +88,7 @@ export function Work() {
             company="Grupo Lerche"
             dates="Sept-17 ~ April-18"
             responsabilities={["Conducted quality control inspections on LED display panels", "Performed diagnostic testing to identify hardware defects", "Documented technical reports for repair teams"]}
-            description="At Grupo Lerche I installed and maintained LED advertising screens for football stadiums, including Valencia CF and Real Madrid. I specialized in quality control, using diagnostic tests to detect hardware defects, documenting issues, and ensuring all units met strict quality standards before shipment. This role strengthened my attention to detail, problem-solving, and technical troubleshooting — skills I now apply in software development."
+            description="At Grupo Lerche I installed and maintained LED advertising screens for football stadiums, including Arsenal and Real Madrid. I specialized in quality control, using diagnostic tests to detect hardware defects, documenting issues, and ensuring all units met strict quality standards before shipment. This role strengthened my attention to detail, problem-solving, and technical troubleshooting."
           />
         </div>
       )

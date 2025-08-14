@@ -30,7 +30,7 @@ export default function Stack() {
                     <MERNLetter name='NodeJs' delay={30} color='lime' icon={<Nodejs />} subtitle='JavaScript Runtime environment' />
                     <div className='bg-cyan-400 text-cyan-400 bg-lime-400 text-lime-400 bg-green-400 text-green-400'></div>
                 </div>
-                <div className='flex flex-col my-8 w-full lg:m-8 items-center'>
+                <div className='flex flex-col my-8 w-full lg:m-8 items-center lg:items-start'>
                     <h3 className='text-2xl md:text-4xl w-full ml-8 mb-8 text-slate-200'>Other <span className='text-yellow-400'>Technologies</span></h3>
                     <ul className='grid grid-cols-3 w-fit justify-center items-center'>
                         <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black '><JavaScript /> JavaScript</li>
