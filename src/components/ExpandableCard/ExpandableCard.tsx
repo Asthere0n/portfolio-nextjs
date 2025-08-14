@@ -11,7 +11,7 @@ export function ExpandableCard() {
     null
   );
   const id = useId();
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null!);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
