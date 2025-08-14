@@ -43,6 +43,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 870px;
+  --breakpoint-lg: 1400px;
 }
 
 :root {
@@ -118,6 +121,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
