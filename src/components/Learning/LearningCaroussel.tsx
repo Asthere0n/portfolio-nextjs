@@ -38,14 +38,14 @@ export function LearningCaroussel() {
             button: "See more",
             src: "/img/learnGitBranching.png",
             link:"https://learngitbranching.js.org/",
-            description: "Learn Git Branching description"
+            description: "The gamified challenges kept me engaged while reinforcing my understanding of Git’s underlying mechanics. Instead of memorizing commands, I built an intuitive mental model of how Git works, which has made me more confident in real-world version control tasks. It’s a resource I’d recommend to anyone who wants to truly “see” Git in action rather than just read about it."
         },
         {
             title: "SQL Bolt",
             button: "See More",
             src: "/img/sqlbolt.png",
             link:"https://sqlbolt.com/",
-            description: "SQL Bolt description"
+            description: "The platform’s step-by-step approach let me practice queries directly in the browser, getting instant feedback and refining my understanding along the way. I appreciated how it built complexity gradually, helping me go from simple queries to more advanced database operations with confidence."
         }
     ];
     return (
