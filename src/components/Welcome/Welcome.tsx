@@ -7,7 +7,7 @@ export default function Welcome() {
     <div className='flex flex-col justify-center items-center w-[100dvw] h-[100dvh] overflow-hidden'>
       <WorldMap />
       <div className='flex flex-col lg:flex-row justify-center items-center w-full mb-8'>
-        <h1 className='text-5xl m-5'>Welcome to my <span className='text-yellow-400'></span></h1>
+        <h1 className='text-3xl sm:text-5xl m-5'>Welcome to my <span className='text-yellow-400'></span></h1>
         <MatrixText
           text="Portfolio"
           initialDelay={200}

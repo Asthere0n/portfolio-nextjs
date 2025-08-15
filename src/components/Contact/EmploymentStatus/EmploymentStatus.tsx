@@ -5,8 +5,8 @@ export default function EmploymentStatus() {
   return (
     <Link
       href='https://www.linkedin.com/in/cristian-sanchez-c/'
-      className='group flex pointer text-xl hover:text-shadow-2xs text-shadow-white text-green-400 p-3 border-4 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:shadow-2xl shadow-green-600 font-bold transition-all duration-300'>
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} className='mr-3' xmlns="http://www.w3.org/2000/svg">
+      className='group flex justify-around items-center pointer text-md sm:text-xl hover:text-shadow-2xs text-shadow-white text-green-400 p-3 border-4 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:shadow-2xl shadow-green-600 font-bold transition-all duration-300'>
+      <svg width={30} height={30} viewBox="0 0 24 24" fill="none" stroke="currentColor" className='mr-3' xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
