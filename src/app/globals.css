@@ -5,6 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme{
+  --breakpoint-xs: 399px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

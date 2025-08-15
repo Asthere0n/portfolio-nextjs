@@ -15,21 +15,21 @@ export default function ExpandedCard(props: Props) {
             <p className='text-xl'>{ props.description }</p>
 
             <p className='font-extrabold my-2 text-2xl w-full bg-slate-800 px-2'>Key Features</p>
-            <ul>
+            <ul className='list-disc pl-5'>
                 {props.keyFeatures.map((feature, index) => {
-                    return <li className='text-xl' key={`feature-${props.title}-${index}`}>{ feature }</li>
+                    return <li className='text-xl my-2' key={`feature-${props.title}-${index}`}>{ feature }</li>
                 }) }
             </ul>
             <p className='font-extrabold text-2xl my-2 w-full bg-slate-800 px-2'>Challenges & Solutions</p>
-            <ul>
+            <ol className='list-decimal pl-5'>
                 {props.challenges.map((challenge, index) => {
-                    return <li className='text-xl' key={`challenge-${props.title}-${index}`}>{ challenge }</li>
+                    return <li className='text-xl my-2' key={`challenge-${props.title}-${index}`}>{ challenge }</li>
                 }) }
-            </ul>
+            </ol>
             <p className='font-extrabold text-2xl my-2 w-full bg-slate-800 px-2'>Learning Takeways</p>
-            <ul>
+            <ul className='list-disc pl-5'>
                 {props.takeaways.map((takeway, index) => {
-                    return <li className='text-xl' key={`takeway-${props.title}-${index}`}>{ takeway }</li>
+                    return <li className='text-xl my-2' key={`takeway-${props.title}-${index}`}>{ takeway }</li>
                 }) }
             </ul>
         </div>

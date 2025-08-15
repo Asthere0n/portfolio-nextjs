@@ -103,7 +103,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             decoding="sync"
           />
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0 pointer-events-none "
             style={{
               background: "linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%)",
             }}
@@ -130,7 +130,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 {button}
                 </a>
           </div>
-            <p className="text-left">{description}</p>
+            <p className="text-left max-h-[50%] overflow-hidden">{description}</p>
             <div className="flex justify-center">
             </div>
         </article>

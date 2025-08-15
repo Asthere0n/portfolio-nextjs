@@ -31,7 +31,7 @@ export function LearningCaroussel() {
             button: "See more",
             src: "/img/grokkingalgorithms.jpg",
             link:"https://www.amazon.co.uk/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230",
-            description: "Despite being written with Python developers on mind, I found very useful it's code examples and it's graphs. I also appreciate the practicality of the book focusing in algorithms that are commonly useful within the industry (such us quicksort, binary search, hash tables or node trees). I think I fall in love with coding when I fully wrapped my mind around the concept of recursivity and how we can solve very complex problems by reducing them into very small and simple problems using recursivity."
+            description: "I appreciate the practicality of the book focusing in algorithms that are commonly useful within the industry (such us quicksort, binary search, hash tables or node trees). I think I fall in love with coding when I fully wrapped my mind around the concept of recursivity and how we can solve very complex problems by reducing them into very small and simple problems using recursivity."
         },
         {
             title: "Learn Git Branching",
