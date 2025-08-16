@@ -13,7 +13,7 @@ export default function Hero() {
       alt='beatiful Spanish developer'
       height={600}
       width={600}
-      className='w-[300px] md:w-[600px] rounded-3xl mt-12 border-yellow-400 border-4 scale-x-[-1] '
+      className='w-[300px] md:w-[600px] rounded-3xl mt-12 border-slate-500 border-6 scale-x-[-1] '
       />
       <div className='flex flex-col gap-8 justify-center items-center md:items-start md:p-12 mt-8 md:m-0'>
       <h2 className='text-4xl p-5 w-full'>Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span></h2>
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className='flex gap-2 items-center '>
         <SpainFlag className='w-12' />
         <UKFlag className='w-12' />
-        <h3 className='text-white text-3xl'>Bilingual </h3>
+        <h3 className='text-white text-3xl ml-2'>Bilingual </h3>
         </div>
         <EmploymentStatus />
       </div>

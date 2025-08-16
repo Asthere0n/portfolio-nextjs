@@ -26,7 +26,7 @@ export default function Stack() {
                     <p className='text-2xl text-slate-400 w-full md:w-[45ch] ml-4 my-5 text-justify'>MERN is the set of tools of my choice that allow me to build complete application from top to bottom without ever leaving JavaScript.</p>
                     <MERNLetter name='MongoDB' delay={0} icon={<MongoDB />} color='green' subtitle='NoSQL Database' />
                     <MERNLetter name='Express' delay={10} icon={<Expressjs />} color='yellow' subtitle='Back end Framework to build RESTful APIs' />
-                    <MERNLetter name='React' delay={10} color='cyan' icon={<ReactJS />} subtitle='Front end Framework to build user interfaces' />
+                    <MERNLetter name='React' delay={10} color='cyan' icon={<ReactJS />} subtitle='Front end Framework to build UIs' />
                     <MERNLetter name='NodeJs' delay={30} color='lime' icon={<Nodejs />} subtitle='JavaScript Runtime environment' />
                     <div className='bg-cyan-400 text-cyan-400 bg-lime-400 text-lime-400 bg-green-400 text-green-400'></div>
                 </div>
