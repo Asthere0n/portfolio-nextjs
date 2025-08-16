@@ -158,7 +158,7 @@ const cards = [
             return (
                 <ExpandedCard
                     title={this.title}
-                    description="Building and managing Dungeons & Dragons characters often involves scattered tools, manual tracking, and disorganized character sheets. Paper Dragon aims to centralize character creation, customization, and storage while providing a beautiful, comic-style interface and long-term extensibility."
+                    description="The portfolio you’re exploring right now — a fully responsive, accessible, and animated site built to showcase my journey as a full-stack developer."
                     keyFeatures={[
                         "Custom wireframe and layout design based on UX best practices",
                         "Fully responsive design across mobile, tablet, and desktop",
