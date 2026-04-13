@@ -23,9 +23,9 @@ const cards = [
                         "Fast deployment via Vercel hosting"
                     ]}
                     challenges={[
-                        "Challenge 1: Designing a user interface that could be quickly and easily used by busy staff with minimal training. /n Solution: Focused on minimal clicks, large buttons, and clear visual hierarchy using Tailwind CSS for rapid and accessible UI design.",
-                        "Challenge 2: Implementing reliable date calculations to handle different shelf lives correctly. /n Solution: Utilized JavaScript’s built-in Date API with added validation logic to prevent user errors.",
-                        "Challenge 3: Deploying a fully serverless solution to minimize costs and maintenance. /n Solution: Built a fully client-side React app with no backend dependencies, deployed seamlessly via Vercel."
+                        "Challenge 1: Designing a user interface that could be quickly and easily used by busy staff with minimal training. \n Solution: Focused on minimal clicks, large buttons, and clear visual hierarchy using Tailwind CSS for rapid and accessible UI design.",
+                        "Challenge 2: Implementing reliable date calculations to handle different shelf lives correctly. \n Solution: Utilized JavaScript’s built-in Date API with added validation logic to prevent user errors.",
+                        "Challenge 3: Deploying a fully serverless solution to minimize costs and maintenance. \n Solution: Built a fully client-side React app with no backend dependencies, deployed seamlessly via Vercel."
                     ]}
                     takeaways={[
                         "Improved my ability to scope small, highly-focused tools that solve real-world business problems",
@@ -59,8 +59,8 @@ const cards = [
                         "Pure HTML, CSS, and Vanilla JavaScript — no external frameworks. Every line of code was written by me."
                     ]}
                     challenges={[
-                        "Challenge 1: Implementing the Knight’s pathfinding algorithm to determine the optimal route and move count. /n Solution: Designed and implemented a simplified version of the Breadth-First Search (BFS) algorithm to calculate the shortest path efficiently for the Knight’s L-shaped moves.",
-                        "Challenge 2: Ensuring the game was fully functional and visually consistent across different browsers and screen sizes./n Solution: Applied responsive design principles and rigorously tested cross-browser compatibility."
+                        "Challenge 1: Implementing the Knight’s pathfinding algorithm to determine the optimal route and move count. \n Solution: Designed and implemented a simplified version of the Breadth-First Search (BFS) algorithm to calculate the shortest path efficiently for the Knight’s L-shaped moves.",
+                        "Challenge 2: Ensuring the game was fully functional and visually consistent across different browsers and screen sizes.\n Solution: Applied responsive design principles and rigorously tested cross - browser compatibility."
                     ]}
                     takeaways={[
                         "Gained hands-on experience with algorithm design, specifically BFS for game logic.",
@@ -96,9 +96,9 @@ const cards = [
                         "Deployed on RailwayApp"
                     ]}
                     challenges={[
-                        "Challenge 1: Structuring a scalable backend architecture as the app complexity grew. /n Solution: Adopted the MVC pattern early, which made the codebase cleaner, modular, and easier to debug.",
-                        "Challenge 2: Adapting the neo-brutalist UI to be fully responsive across devices. /n Solution: Applied CSS media queries and flexible layouts, ensuring a smooth experience on both mobile and desktop.",
-                        "Challenge 3: Handling deployment on a cloud platform for the first time. /n Solution: Researched and deployed the project on Railway.App, learning cloud hosting, environment variables, and remote database connections."
+                        "Challenge 1: Structuring a scalable backend architecture as the app complexity grew.\nSolution: Adopted the MVC pattern early, which made the codebase cleaner, modular, and easier to debug.",
+                        "Challenge 2: Adapting the neo-brutalist UI to be fully responsive across devices.\nSolution: Applied CSS media queries and flexible layouts, ensuring a smooth experience on both mobile and desktop.",
+                        "Challenge 3: Handling deployment on a cloud platform for the first time.\nSolution: Researched and deployed the project on Railway.App, learning cloud hosting, environment variables, and remote database connections."
                     ]}
                     takeaways={[
                         "Gained practical experience in HTTP communication, client-server interaction, and API route handling.",
@@ -132,9 +132,9 @@ const cards = [
                         "Extensive use of Arch community documentation for troubleshooting, customization and optimization"
                     ]}
                     challenges={[
-                        "Challenge 1: Identifying open-source alternatives for all proprietary software needs. /n Solution: Researched, tested, and integrated tools like GIMP, LibreOffice, OBS, and open-source development tools into my daily workflow.",
-                        "Challenge 2: Critical installation error — accidentally deleted bootloader while partitioning disks during first Arch Linux installation. /n Solution: Leveraged Arch Linux documentation, community forums, and extensive reading to recover the system, reinstall the bootloader, and complete installation.",
-                        "Challenge 3: High learning curve when customizing the system and integrating automation into daily tasks. /n Solution: Developed custom shell scripts to automate workspace management (e.g., dynamic monitor layouts, keyboard remapping, window tiling), improving overall productivity and control."
+                        "Challenge 1: Identifying open-source alternatives for all proprietary software needs.\nSolution: Researched, tested, and integrated tools like GIMP, LibreOffice, OBS, and open-source development tools into my daily workflow.",
+                        "Challenge 2: Critical installation error — accidentally deleted bootloader while partitioning disks during first Arch Linux installation.\nSolution: Leveraged Arch Linux documentation, community forums, and extensive reading to recover the system, reinstall the bootloader, and complete installation.",
+                        "Challenge 3: High learning curve when customizing the system and integrating automation into daily tasks.\nSolution: Developed custom shell scripts to automate workspace management (e.g., dynamic monitor layouts, keyboard remapping, window tiling), improving overall productivity and control."
                     ]}
                     takeaways={[
                         "Developed strong system administration and Linux troubleshooting skills",
@@ -168,8 +168,8 @@ const cards = [
                         "Optimized for recruiter scanning and fast navigation"
                     ]}
                     challenges={[
-                        "Challenge 1: Making sure the site worked seamlessly across all screen sizes. /n Solution: Built mobile-first and tested extensively using Tailwind's responsive utilities.",
-                        "Challenge 2: Implementing smooth animations without sacrificing performance. /n Solution: Used Framer Motion to create performant, interruptible transitions that enhance UX without delay."
+                        "Challenge 1: Making sure the site worked seamlessly across all screen sizes.\nSolution: Built mobile-first and tested extensively using Tailwind's responsive utilities.",
+                        "Challenge 2: Implementing smooth animations without sacrificing performance.\nSolution: Used Framer Motion to create performant, interruptible transitions that enhance UX without delay."
                     ]}
                     takeaways={[
                         "Deepened my understanding of responsive and accessible UI design",
@@ -201,9 +201,9 @@ const cards = [
                         "Character Sheet builder with real-time data validation"
                     ]}
                     challenges={[
-                        "Challenge 1: Scaling up to a much larger, more complex project than previous personal builds. /n Solution: Carefully planning project architecture, breaking down features into smaller milestones, and continuously refactoring code for maintainability.",
-                        "Challenge 2: Handling dynamic data structures for complex character data while preserving flexibility. /n Solution: Designing robust MongoDB schemas that can adapt to different classes, abilities, and customization options.",
-                        "Challenge 3: Balancing creative design vision with functional UI/UX best practices. /n Solution: Leveraging ShadCN’s component library for consistency while adding custom comic-style visual elements for personality."
+                        "Challenge 1: Scaling up to a much larger, more complex project than previous personal builds. \n Solution: Carefully planning project architecture, breaking down features into smaller milestones, and continuously refactoring code for maintainability.",
+                        "Challenge 2: Handling dynamic data structures for complex character data while preserving flexibility. \n Solution: Designing robust MongoDB schemas that can adapt to different classes, abilities, and customization options.",
+                        "Challenge 3: Balancing creative design vision with functional UI/UX best practices. \n Solution: Leveraging ShadCN’s component library for consistency while adding custom comic-style visual elements for personality."
                     ]}
                     takeaways={[
                         "Gained practical experience in full-stack architecture with NextJS and MongoDB",

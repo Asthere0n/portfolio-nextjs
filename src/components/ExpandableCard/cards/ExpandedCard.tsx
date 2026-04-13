@@ -23,7 +23,7 @@ export default function ExpandedCard(props: Props) {
             <p className='font-extrabold text-2xl my-2 w-full bg-slate-800 px-2'>Challenges & Solutions</p>
             <ol className='list-decimal pl-5'>
                 {props.challenges.map((challenge, index) => {
-                    return <li className='text-xl my-2' key={`challenge-${props.title}-${index}`}>{ challenge }</li>
+                    return <li className='text-xl my-2 whitespace-pre-line' key={`challenge-${props.title}-${index}`}>{ challenge }</li>
                 }) }
             </ol>
             <p className='font-extrabold text-2xl my-2 w-full bg-slate-800 px-2'>Learning Takeways</p>
