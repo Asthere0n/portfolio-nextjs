@@ -6,18 +6,18 @@ import { Carousel } from "@/components/ui/carousel";
 export function LearningCaroussel() {
     const slideData = [
         {
-            title: "Eloquent JavaScript",
-            button: "See more",
-            src: "/img/EloquentJS.jpg",
-            link: "https://eloquentjavascript.net/",
-            description: "Eloquent JavaScript solidified my core JavaScript understanding. I particularly enjoyed how updated and relevant it is to modern web development and that the progression it's project based."
-        },
-        {
             title: "The Odin Project",
             button: "See more",
             src: "/img/odinproject.png",
             link:"https://www.theodinproject.com/",
             description: "This course with it's open-sourced project-based curriculum taught me the ins & outs of full-stack deployment, git workflows and served me as a structure path through all the information available in the internet. It equipped me with problem-solving resilience and made me fall in love with the open-source community."
+        },
+        {
+            title: "Eloquent JavaScript",
+            button: "See more",
+            src: "/img/EloquentJS.jpg",
+            link: "https://eloquentjavascript.net/",
+            description: "Eloquent JavaScript solidified my core JavaScript understanding. I particularly enjoyed how updated and relevant it is to modern web development and that the progression it's project based."
         },
         {
             title: "Refactoring UI",

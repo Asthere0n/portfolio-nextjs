@@ -18,8 +18,8 @@ export function Work() {
             company="Diligenta"
             dates="Nov-25 ~ Today"
             location="Stirling, UK"
-            description="At Diligenta I'm "
-            src="/img/diligenta_logo.jpg"
+            description="In my role at Diligenta, supporting Prudential customers, I manage complex insurance and investment enquiries where accuracy and diligence are essential. I am responsible for delivering truthful, compliant information in line with FCA guidance, while protecting customers through strong identity verification and fraud prevention controls. As part of the first line of defence, I help safeguard accounts against fraud, identity theft, and money laundering, ensuring every interaction is handled with integrity, care, and regulatory awareness."
+            src="/img/diligenta-logo.jpeg"
             responsabilities={["Provide clear, accurate, and truthful information to customers.", "Exercise a high level of diligence and professional judgement when dealing with sensitive financial matters.", "Act as a first line of defence against fraud, identity theft, and money laundering"]}
           />
         </div>
