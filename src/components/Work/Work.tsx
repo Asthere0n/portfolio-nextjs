@@ -9,7 +9,22 @@ import Moving from "./Moving/Moving";
 
 export function Work() {
   const data = [
-    {
+        {
+      title: "2026",
+      content: (
+        <div className="flex flex-col">
+          <WorkCard
+            title="Call Agent (Prudential account)"
+            company="Diligenta"
+            dates="Nov-25 ~ Today"
+            location="Stirling, UK"
+            description="At Diligenta I'm "
+            src="/img/diligenta_logo.jpg"
+            responsabilities={["Provide clear, accurate, and truthful information to customers.", "Exercise a high level of diligence and professional judgement when dealing with sensitive financial matters.", "Act as a first line of defence against fraud, identity theft, and money laundering"]}
+          />
+        </div>
+      ),
+    },{
       title: "2025",
       content: (
         <div className="flex flex-col">

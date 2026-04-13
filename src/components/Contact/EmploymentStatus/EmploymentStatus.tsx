@@ -14,7 +14,7 @@ export default function EmploymentStatus() {
               className="fill-current text-green-400 group-hover:text-white transition-colors duration-300"
             />
           </svg>
-          LOOKING FOR WORK
+          CURRENTLY EMPLOYED
     </Link>
   )
 }
