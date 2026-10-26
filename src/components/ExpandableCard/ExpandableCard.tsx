@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import CardData from "./cards/CardData";
 import TechPills from "./TechPills/TechPills";
@@ -12,6 +12,7 @@ export function ExpandableCard() {
   );
   const id = useId();
   const ref = useRef<HTMLDivElement>(null!);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -35,9 +36,9 @@ export function ExpandableCard() {
   return (
     <motion.div
       className="min-h-screen w-fit"
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}>
+      initial={prefersReducedMotion ? false : { opacity: 0, x: -100 }}
+      animate={prefersReducedMotion ? undefined : { opacity: 1, x: 0 }}
+      transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: "easeOut" }}>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div

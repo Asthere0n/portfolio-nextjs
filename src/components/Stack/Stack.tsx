@@ -79,8 +79,8 @@ export default function Stack() {
 
                     <motion.ul
                     className="grid grid-cols-3 w-fit justify-center items-center"
-                    initial="hidden"
-                    whileInView="visible"
+                    initial={prefersReducedMotion ? false : "hidden"}
+                    whileInView={prefersReducedMotion ? undefined : "visible"}
                     viewport={{ once: true, margin: "-60px" }}
                     variants={{
                         hidden: {},
