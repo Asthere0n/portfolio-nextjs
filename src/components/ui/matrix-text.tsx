@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { EASE_OUT_EXPO } from "./motion-config";
 
 interface LetterState {
     char: string;
@@ -107,6 +108,8 @@ export const MatrixText = ({
         }
     }, [isAnimating, startAnimation]);
 
+    const prefersReducedMotion = useReducedMotion();
+
     const motionVariants = useMemo(
         () => ({
             matrix: {
@@ -131,19 +134,35 @@ export const MatrixText = ({
                         <motion.div
                             key={`${index}-${letter.char}`}
                             className="text-5xl w-[1ch] text-center overflow-hidden"
-                            initial="initial"
-                            animate={letter.isMatrix ? "matrix" : "normal"}
-                            variants={motionVariants}
+                            initial={
+                                prefersReducedMotion
+                                    ? false
+                                    : { opacity: 0, y: 18 }
+                            }
+                            animate={
+                                prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+                            }
                             transition={{
-                                duration: 0.1,
-                                ease: "easeInOut",
+                                duration: 0.45,
+                                ease: EASE_OUT_EXPO,
+                                delay: prefersReducedMotion ? 0 : index * 0.06,
                             }}
                             style={{
                                 display: "inline-block",
                                 fontVariantNumeric: "tabular-nums",
                             }}
                         >
-                            {letter.isSpace ? "\u00A0" : letter.char}
+                            <motion.span
+                                animate={letter.isMatrix ? "matrix" : "normal"}
+                                variants={motionVariants}
+                                transition={{
+                                    duration: 0.1,
+                                    ease: "easeInOut",
+                                }}
+                                style={{ display: "inline-block" }}
+                            >
+                                {letter.isSpace ? "\u00A0" : letter.char}
+                            </motion.span>
                         </motion.div>
                     ))}
                 </div>
