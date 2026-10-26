@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { useState, useRef, useEffect } from "react"
+import { motion, useReducedMotion } from "motion/react"
 import { cn } from "@/lib/utils"
+import { EASE_OUT_EXPO } from "./motion-config"
 
 interface Tab {
   id: string
@@ -22,6 +24,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
     const [hoverStyle, setHoverStyle] = useState({})
     const [activeStyle, setActiveStyle] = useState({ left: "0px", width: "0px" })
     const tabRefs = useRef<(HTMLDivElement | null)[]>([])
+    const prefersReducedMotion = useReducedMotion()
 
     useEffect(() => {
       if (hoveredIndex !== null) {
@@ -91,8 +94,8 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                 ref={(el) => { tabRefs.current[index] = el; }}
                 className={cn(
                   "px-3 py-2 cursor-pointer transition-colors duration-300 h-[30px]",
-                  index === activeIndex 
-                    ? "text-yellow-400 text-5xl" 
+                  index === activeIndex
+                    ? "text-yellow-400"
                     : "text-slate-200"
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -102,9 +105,21 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                   onTabChange?.(tab.id)
                 }}
               >
-                <div className="font-medium leading-5 whitespace-nowrap text-2xl md:text-4xl flex items-center justify-center h-full">
+                <motion.div
+                  animate={
+                    prefersReducedMotion
+                      ? undefined
+                      : { fontSize: index === activeIndex ? "2.25rem" : "1.5rem" }
+                  }
+                  transition={
+                    prefersReducedMotion
+                      ? undefined
+                      : { duration: 0.35, ease: EASE_OUT_EXPO }
+                  }
+                  className="font-medium leading-5 whitespace-nowrap text-2xl md:text-4xl flex items-center justify-center h-full"
+                >
                   {tab.label}
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
