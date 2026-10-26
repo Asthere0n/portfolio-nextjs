@@ -3,7 +3,7 @@ import {
   useMotionValueEvent,
   useScroll,
   useTransform,
-  motion,
+  m,
   useReducedMotion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
@@ -48,7 +48,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-8 lg:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-                <motion.div
+                <m.div
                 className="h-10 absolute left-3 w-4 md:w-10 rounded-full bg-gradient-radial from-yellow-200 to-slate-700 flex items-center justify-center"
                 initial={prefersReducedMotion ? false : { scale: 0, opacity: 0 }}
                 whileInView={prefersReducedMotion ? undefined : { scale: 1, opacity: 1 }}
@@ -56,8 +56,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
                 >
                   <div className="h-4 w-4 ml-4 rounded-full border bg-slate-900 border-yellow-200 p-2" />
-                </motion.div>
-              <motion.h3
+                </m.div>
+              <m.h3
               className="hidden md:block text-xl md:pl-20 md:text-3xl lg:text-5xl font-bold text-slate-300"
               initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
               whileInView={prefersReducedMotion ? undefined : { opacity: 1, x: 0 }}
@@ -65,11 +65,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.1 }}
               >
                 {item.title}
-              </motion.h3>
+              </m.h3>
             </div>
 
             <div className="relative pl-8 ml-8 lg:pl-20 pr-4 w-full">
-              <motion.h3
+              <m.h3
               className="md:hidden flex text-2xl ml-4 mb-4 text-left font-bold text-slate-300"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
               whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
               >
                 {item.title}
-              </motion.h3>
+              </m.h3>
               {item.content}{" "}
             </div>
           </div>
@@ -88,7 +88,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           }}
           className="absolute left-[27px] md:left-[38px]  top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
-          <motion.div
+          <m.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,

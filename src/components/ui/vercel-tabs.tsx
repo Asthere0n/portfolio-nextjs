@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useState, useRef, useEffect } from "react"
-import { motion, useReducedMotion } from "motion/react"
+import { motion, useReducedMotion, m } from "motion/react"
 import { cn } from "@/lib/utils"
 import { EASE_OUT_EXPO } from "./motion-config"
 
@@ -105,7 +105,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                   onTabChange?.(tab.id)
                 }}
               >
-                <motion.div
+                <m.div
                   animate={
                     prefersReducedMotion
                       ? undefined
@@ -119,7 +119,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                   className="font-medium leading-5 whitespace-nowrap text-2xl md:text-4xl flex items-center justify-center h-full"
                 >
                   {tab.label}
-                </motion.div>
+                </m.div>
               </div>
             ))}
           </div>

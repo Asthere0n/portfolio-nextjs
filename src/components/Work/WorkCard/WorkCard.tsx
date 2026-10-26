@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, m } from "motion/react";
 
 export interface Props {
     title: string,
@@ -19,7 +19,7 @@ export default function WorkCard(props: Props) {
     const [flipped, setFlipped] = useState(false)
 
     return (
-        <motion.div
+        <m.div
         className="w-full"
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function WorkCard(props: Props) {
             onMouseEnter={() => !prefersReducedMotion && setFlipped(true)}
             onMouseLeave={() => !prefersReducedMotion && setFlipped(false)}
             >
-                <motion.div
+                <m.div
                 className="relative w-full"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={prefersReducedMotion ? undefined : { rotateY: flipped ? 180 : 0 }}
@@ -68,8 +68,8 @@ export default function WorkCard(props: Props) {
                     style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                         <p className='text-left flex h-full items-center'>{props.description}</p>
                     </div>
-                </motion.div>
+                </m.div>
             </div>
-        </motion.div>
+        </m.div>
     )
 }

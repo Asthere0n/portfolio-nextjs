@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { motion, useReducedMotion } from "motion/react"
+import { motion, useReducedMotion, m } from "motion/react"
 
 // Components
 import MERNLetter from './MERNLetter/MERNLetter'
@@ -40,7 +40,7 @@ export default function Stack() {
             <div className=' flex flex-col items-start lg:flex-row w-full justify-center md:items-start lg:px-28 pt-16'>
 
                 <div className='md:m-8 w-[90%] lg:w-[60%] '>
-                    <motion.h2
+                    <m.h2
                     className='text-3xl md:text-5xl text-slate-200 ml-4'
                     initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
                     whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -48,9 +48,9 @@ export default function Stack() {
                     transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
                     >
                     But what's <span className='text-yellow-400'>MERN</span>?
-                    </motion.h2>
+                    </m.h2>
 
-                    <motion.p
+                    <m.p
                     className='text-2xl text-slate-400 w-full md:w-[45ch] ml-4 my-5 text-justify'
                     initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
                     whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function Stack() {
                     transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.1 }}
                     >
                     MERN is the set of tools of my choice that allow me to build complete application from top to bottom without ever leaving JavaScript.
-                    </motion.p>
+                    </m.p>
 
                     <MERNLetter name='MongoDB' delay={0} icon={<MongoDB />} color='green' subtitle='NoSQL Database' />
                     <MERNLetter name='Express' delay={0.1} icon={<Expressjs />} color='yellow' subtitle='Back end Framework to build RESTful APIs' />
@@ -67,7 +67,7 @@ export default function Stack() {
                 </div>
 
                 <div className="flex flex-col my-8 lg:m-8 items-center lg:items-start ml-12">
-                    <motion.h3
+                    <m.h3
                     className='text-2xl md:text-4xl w-full ml-8 mb-8 text-slate-200'
                     initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
                     whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -75,9 +75,9 @@ export default function Stack() {
                     transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
                     >
                     Other <span className='text-yellow-400'>Technologies</span>
-                    </motion.h3>
+                    </m.h3>
 
-                    <motion.ul
+                    <m.ul
                     className="grid grid-cols-3 w-fit justify-center items-center"
                     initial={prefersReducedMotion ? false : "hidden"}
                     whileInView={prefersReducedMotion ? undefined : "visible"}
@@ -90,7 +90,7 @@ export default function Stack() {
                     }}
                     >
                         {technologies.map((tech) => (
-                            <motion.li
+                            <m.li
                             key={tech.label}
                             variants={{
                                 hidden: { opacity: 0, scale: 0.7 },
@@ -101,9 +101,9 @@ export default function Stack() {
                             className={`font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 ${tech.className}`}
                             >
                             {tech.icon} {tech.label}
-                            </motion.li>
+                            </m.li>
                         ))}
-                    </motion.ul>
+                    </m.ul>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { motion, useReducedMotion, useScroll, useTransform, m } from "motion/react";
 import { useRef } from "react";
 import ContactLinks from '../ContactLinks/ContactLinks'
 import SpainFlag from '../../../public/icons/SpainFlag'
@@ -37,11 +37,11 @@ export default function Hero() {
         ref={containerRef}
         className='w-screen min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center p-8 bg-slate-700 border-y-4 border-slate-500 overflow-x-hidden'
         >
-        <motion.div
+        <m.div
         style={prefersReducedMotion ? undefined : { y: portraitY, scale: portraitScale }}
         className='flex justify-center'
         >
-        <motion.div
+        <m.div
         {...entrance}
         transition={
             prefersReducedMotion
@@ -56,14 +56,14 @@ export default function Hero() {
         width={600}
         className='w-[300px] md:w-[600px] rounded-3xl mt-12 border-slate-500 border-6 scale-x-[-1] '
         />
-        </motion.div>
-        </motion.div>
+        </m.div>
+        </m.div>
 
-        <motion.div
+        <m.div
         style={prefersReducedMotion ? undefined : { y: contentY }}
         className="flex flex-col gap-8 justify-center items-center md:items-start md:p-12 mt-8 md:m-0"
         >
-        <motion.h2
+        <m.h2
         {...entrance}
         transition={
             prefersReducedMotion
@@ -73,9 +73,9 @@ export default function Hero() {
         className='text-4xl p-5 w-full'
         >
         Hi! I am <span className='text-yellow-400 font-semibold'>Cristian Sanchez</span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.div
+        <m.div
         {...entrance}
         transition={
             prefersReducedMotion
@@ -85,26 +85,26 @@ export default function Hero() {
         className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900 rounded-2xl p-8 border-2 border-slate-800 w-full'
         >
         <div className='flex gap-2 items-center '>
-        <motion.span
+        <m.span
         initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.6, rotate: -20 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, rotate: 0 }}
         transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.55 }}
         >
         <SpainFlag className='w-12' />
-        </motion.span>
-        <motion.span
+        </m.span>
+        <m.span
         initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.6, rotate: 20 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, rotate: 0 }}
         transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.65 }}
         >
         <UKFlag className='w-12' />
-        </motion.span>
+        </m.span>
         <h3 className='text-white text-3xl ml-2'>Bilingual </h3>
         </div>
         <EmploymentStatus />
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
         {...entrance}
         transition={
             prefersReducedMotion
@@ -114,9 +114,9 @@ export default function Hero() {
         className='text-lg p-5 text-justify text-white w-[30ch] md:w-[55ch]'
         >
         A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Web Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
         {...entrance}
         transition={
             prefersReducedMotion
@@ -125,8 +125,8 @@ export default function Hero() {
         }
         >
         <ContactLinks />
-        </motion.div>
-        </motion.div>
+        </m.div>
+        </m.div>
     </div>
     )
 }

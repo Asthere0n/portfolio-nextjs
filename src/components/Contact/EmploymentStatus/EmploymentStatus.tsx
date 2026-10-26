@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import { motion, useReducedMotion } from "motion/react"
+import { motion, useReducedMotion, m } from "motion/react"
 
 export default function EmploymentStatus() {
     const prefersReducedMotion = useReducedMotion()
@@ -14,7 +14,7 @@ export default function EmploymentStatus() {
     >
       {/* Soft pulsing halo that signals the "open to work" state. */}
       {!prefersReducedMotion && (
-        <motion.span
+        <m.span
         aria-hidden="true"
         className="absolute inset-0 rounded-lg border-2 border-green-400"
         animate={{ opacity: [0.6, 0, 0.6], scale: [1, 1.06, 1] }}

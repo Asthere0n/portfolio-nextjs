@@ -1,14 +1,14 @@
 "use client"
 import { Tabs } from "@/components/ui/vercel-tabs"
-import { AnimatePresence, motion, useReducedMotion } from "motion/react"
+import { AnimatePresence, motion, useReducedMotion, m } from "motion/react"
 import { useState } from "react"
 import {Work} from "../Work/Work"
 import { ExpandableCard } from "../ExpandableCard/ExpandableCard"
 import { EASE_OUT_EXPO } from "../ui/motion-config"
 
 const tabs = [
-  { id: "Projects", label: "Projects" },
   { id: "Work", label: "Work" },
+  { id: "Projects", label: "Projects" },
 ]
 
 export default function Experience() {
@@ -24,7 +24,7 @@ export default function Experience() {
       />
       <div className="flex justify-center items-center w-full transition-all duration-500 mt-4 overflow-hidden">
       <AnimatePresence mode="wait" initial={false}>
-        <motion.div
+        <m.div
         key={activeTab}
         initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function Experience() {
         className="flex justify-center items-center w-full"
         >
         {activeTab === "Projects" ? <ExpandableCard /> : <Work/>}
-        </motion.div>
+        </m.div>
       </AnimatePresence>
       </div>
     </div>

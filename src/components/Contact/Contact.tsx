@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { motion, useReducedMotion } from "motion/react"
+import { motion, useReducedMotion, m } from "motion/react"
 import ContactLinks from '../ContactLinks/ContactLinks'
 import EmploymentStatus from './EmploymentStatus/EmploymentStatus'
 import { EASE_OUT_EXPO } from '../ui/motion-config'
@@ -10,7 +10,7 @@ export default function Contact() {
     const prefersReducedMotion = useReducedMotion()
 
     return (
-        <div className='min-h-160 bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden relative'
+        <div className='min-h-[40rem] bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden relative'
         style={{
         backgroundImage: `
       linear-gradient(
@@ -27,7 +27,7 @@ export default function Contact() {
       }}>
       {/* Slow zoom on the backdrop keeps the closing section alive without
           pulling attention away from the call to action. */}
-      <motion.div
+      <m.div
       aria-hidden="true"
       className="absolute inset-0 bg-cover bg-left"
       style={{
@@ -45,7 +45,7 @@ export default function Contact() {
       }
       />
 
-      <motion.div
+      <m.div
       className='relative flex flex-col p-8 gap-4 items-center justify-center w-[90%] lg:w-[50%] h-fit md:mx-8 rounded-2xl border-4 border-slate-500'
       initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
       whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Contact() {
       <EmploymentStatus />
       <h2 className='text-2xl py-4'> If you've got this far, I think we should get in touch.</h2>
       <ContactLinks />
-      </motion.div>
+      </m.div>
     </div>
     )
 }

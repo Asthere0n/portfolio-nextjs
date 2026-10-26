@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion, m } from "motion/react";
 import { ChevronLeft, ChevronRight, Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -69,7 +69,7 @@ export function TestimonialCarousel({
             <div className="hidden md:flex relative items-center">
                 <div className="w-[470px] h-[470px] rounded-3xl overflow-hidden bg-slate-800 flex-shrink-0">
                     <AnimatePresence mode="wait">
-                        <motion.div
+                        <m.div
                             key={active.imageUrl}
                             {...fade}
                             className="w-full h-full"
@@ -83,13 +83,13 @@ export function TestimonialCarousel({
                                 draggable={false}
                                 priority
                             />
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
                 </div>
 
                 <div className="bg-slate-800 rounded-3xl shadow-2xl p-8 ml-[-80px] z-10 max-w-xl flex-1 border border-slate-700">
                     <AnimatePresence mode="wait">
-                        <motion.div
+                        <m.div
                             key={active.name}
                             {...fade}
                         >
@@ -122,7 +122,7 @@ export function TestimonialCarousel({
                                     ))}
                                 </div>
                             )}
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
                 </div>
             </div>
@@ -131,7 +131,7 @@ export function TestimonialCarousel({
             <div className="md:hidden max-w-sm mx-auto text-center">
                 <div className="w-full aspect-square bg-slate-800 rounded-3xl overflow-hidden mb-6">
                     <AnimatePresence mode="wait">
-                        <motion.div
+                        <m.div
                             key={active.imageUrl}
                             {...fade}
                             className="w-full h-full"
@@ -145,13 +145,13 @@ export function TestimonialCarousel({
                                 draggable={false}
                                 priority
                             />
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
                 </div>
 
                 <div className="px-4">
                     <AnimatePresence mode="wait">
-                        <motion.div key={active.name} {...fade}>
+                        <m.div key={active.name} {...fade}>
                             <h2 className="text-xl font-bold text-white mb-2">
                                 {active.name}
                             </h2>
@@ -178,7 +178,7 @@ export function TestimonialCarousel({
                                     ))}
                                 </div>
                             )}
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
                 </div>
             </div>

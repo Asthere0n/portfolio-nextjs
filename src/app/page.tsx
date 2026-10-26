@@ -14,7 +14,8 @@ export default function Home() {
       <Stack />
       <Experience />
       <Learning />
-      <Contact/>
+      <Contact />
+      <Footer />
     </>
   );
 }
