@@ -4,8 +4,10 @@ import {
   useScroll,
   useTransform,
   motion,
+  useReducedMotion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { EASE_OUT_EXPO } from "./motion-config";
 
 interface TimelineEntry {
   title: string;
@@ -16,6 +18,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     if (ref.current) {
@@ -45,18 +48,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-8 lg:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-                <div className="h-10 absolute left-3 w-4 md:w-10 rounded-full bg-gradient-radial from-yellow-200 to-slate-700 flex items-center justify-center">
+                <motion.div
+                className="h-10 absolute left-3 w-4 md:w-10 rounded-full bg-gradient-radial from-yellow-200 to-slate-700 flex items-center justify-center"
+                initial={prefersReducedMotion ? false : { scale: 0, opacity: 0 }}
+                whileInView={prefersReducedMotion ? undefined : { scale: 1, opacity: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
+                >
                   <div className="h-4 w-4 ml-4 rounded-full border bg-slate-900 border-yellow-200 p-2" />
-                </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl lg:text-5xl font-bold text-slate-300">
+                </motion.div>
+              <motion.h3
+              className="hidden md:block text-xl md:pl-20 md:text-3xl lg:text-5xl font-bold text-slate-300"
+              initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
+              whileInView={prefersReducedMotion ? undefined : { opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.1 }}
+              >
                 {item.title}
-              </h3>
+              </motion.h3>
             </div>
 
             <div className="relative pl-8 ml-8 lg:pl-20 pr-4 w-full">
-              <h3 className="md:hidden flex text-2xl ml-4 mb-4 text-left font-bold text-slate-300">
+              <motion.h3
+              className="md:hidden flex text-2xl ml-4 mb-4 text-left font-bold text-slate-300"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+              whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={prefersReducedMotion ? undefined : { duration: 0.5, ease: EASE_OUT_EXPO }}
+              >
                 {item.title}
-              </h3>
+              </motion.h3>
               {item.content}{" "}
             </div>
           </div>
