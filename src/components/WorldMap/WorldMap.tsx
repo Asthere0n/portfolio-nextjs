@@ -1,7 +1,15 @@
+"use client";
+
 import React from 'react'
+import { m, useReducedMotion } from "motion/react";
 import mapData from './MapData.json'
 
 const CELL_SIZE = 24
+
+/** Delay between the reveal of each horizontal line, in seconds. */
+const ROW_STAGGER = 0.045
+/** Delay before the first line appears. */
+const ROW_START_DELAY = 0.15
 
 function getStyle(content: number) {
     switch (content) {
@@ -13,6 +21,8 @@ function getStyle(content: number) {
 }
 
 export default function WorldMap() {
+    const prefersReducedMotion = useReducedMotion()
+
     return (
 
         <div
@@ -43,23 +53,48 @@ export default function WorldMap() {
                     className="flex justify-around items-center"
                 >
                     {mapData.map((row, rowIndex) => {
-                        return row.map((cell, cellIndex) => {
-                            const styles = getStyle(cell)
-                            return (
-                                <text
-                                    key={`${rowIndex}-${cellIndex}`}
-                                    x={cellIndex * CELL_SIZE + CELL_SIZE / 2}
-                                    y={rowIndex * CELL_SIZE + CELL_SIZE / 2}
-                                    fontSize="18"
-                                    textAnchor="middle"
-                                    dominantBaseline="middle"
-                                    fill={styles.fill}
-                                    fontWeight={styles.fontWeight}
-                                >
-                                    {cell}
-                                </text>
-                            )
-                        })
+                        return (
+                            <m.g
+                                key={rowIndex}
+                                initial={
+                                    prefersReducedMotion
+                                        ? false
+                                        : { opacity: 0 }
+                                }
+                                animate={
+                                    prefersReducedMotion
+                                        ? undefined
+                                        : { opacity: 1 }
+                                }
+                                transition={
+                                    prefersReducedMotion
+                                        ? undefined
+                                        : {
+                                            duration: 0.5,
+                                            ease: "easeOut",
+                                            delay: ROW_START_DELAY + rowIndex * ROW_STAGGER,
+                                        }
+                                }
+                            >
+                                {row.map((cell, cellIndex) => {
+                                    const styles = getStyle(cell)
+                                    return (
+                                        <text
+                                            key={`${rowIndex}-${cellIndex}`}
+                                            x={cellIndex * CELL_SIZE + CELL_SIZE / 2}
+                                            y={rowIndex * CELL_SIZE + CELL_SIZE / 2}
+                                            fontSize="18"
+                                            textAnchor="middle"
+                                            dominantBaseline="middle"
+                                            fill={styles.fill}
+                                            fontWeight={styles.fontWeight}
+                                        >
+                                            {cell}
+                                        </text>
+                                    )
+                                })}
+                            </m.g>
+                        )
                     })}
                 </svg>
             </div>

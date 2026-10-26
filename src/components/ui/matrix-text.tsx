@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { motion, useReducedMotion, m } from "motion/react";
+import { m } from "motion/react";
 import { cn } from "@/lib/utils";
-import { EASE_OUT_EXPO } from "./motion-config";
 
 interface LetterState {
     char: string;
@@ -108,8 +107,6 @@ export const MatrixText = ({
         }
     }, [isAnimating, startAnimation]);
 
-    const prefersReducedMotion = useReducedMotion();
-
     const motionVariants = useMemo(
         () => ({
             matrix: {
@@ -131,39 +128,22 @@ export const MatrixText = ({
             <div className="h-fit flex items-center justify-center">
                 <div className="flex flex-wrap items-center justify-center">
                     {letters.map((letter, index) => (
-                        <m.div
+                        <m.span
                             key={`${index}-${letter.char}`}
                             className="text-5xl w-[1ch] text-center overflow-hidden"
-                            initial={
-                                prefersReducedMotion
-                                    ? false
-                                    : { opacity: 0, y: 18 }
-                            }
-                            animate={
-                                prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
-                            }
+                            animate={letter.isMatrix ? "matrix" : "normal"}
+                            variants={motionVariants}
                             transition={{
-                                duration: 0.45,
-                                ease: EASE_OUT_EXPO,
-                                delay: prefersReducedMotion ? 0 : index * 0.06,
+                                duration: 0.1,
+                                ease: "easeInOut",
                             }}
                             style={{
                                 display: "inline-block",
                                 fontVariantNumeric: "tabular-nums",
                             }}
                         >
-                            <m.span
-                                animate={letter.isMatrix ? "matrix" : "normal"}
-                                variants={motionVariants}
-                                transition={{
-                                    duration: 0.1,
-                                    ease: "easeInOut",
-                                }}
-                                style={{ display: "inline-block" }}
-                            >
-                                {letter.isSpace ? "\u00A0" : letter.char}
-                            </m.span>
-                        </m.div>
+                            {letter.isSpace ? "\u00A0" : letter.char}
+                        </m.span>
                     ))}
                 </div>
             </div>
