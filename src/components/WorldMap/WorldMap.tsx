@@ -14,7 +14,7 @@ function getStyle(content: number) {
 
 export default function WorldMap() {
     return (
-        
+
         <div
             className="absolute flex inset-0 justify-center overflow-hidden w-[100dvw] items-center z-[-1]"
             style={{ width: "100vw", height: "100vh" }}
@@ -43,11 +43,7 @@ export default function WorldMap() {
                     className="flex justify-around items-center"
                 >
                     {mapData.map((row, rowIndex) => {
-                        if (row.length !== 124) {
-                            console.log(`Row ${rowIndex + 1}: ${row.length} elements`)
-                        }
                         return row.map((cell, cellIndex) => {
-                            const randomContent = Math.random()
                             const styles = getStyle(cell)
                             return (
                                 <text
@@ -60,7 +56,7 @@ export default function WorldMap() {
                                     fill={styles.fill}
                                     fontWeight={styles.fontWeight}
                                 >
-                                    {Math.round(randomContent)}
+                                    {cell}
                                 </text>
                             )
                         })
