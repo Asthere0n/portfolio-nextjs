@@ -26,7 +26,7 @@ export default function Hero() {
         <EmploymentStatus />
       </div>
       <p className='text-lg p-5 text-justify text-white w-[30ch] md:w-[55ch]'>
-        A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.
+        A former hospitality manager turned <span className='text-yellow-400 font-semibold'>Full-Stack Web Developer</span>. I use to lead teams in fast-paced environments - now I build responsive, user-focused web apps and tools using the MERN stack. Same chaos, just less dirty laundry.
       </p>
       <ContactLinks />
       </div>

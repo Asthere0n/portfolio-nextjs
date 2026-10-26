@@ -31,7 +31,7 @@ export function Work() {
           <WorkCard
             title="Supervisor"
             company="Costa Coffee"
-            dates="Feb-25 ~ Jun-25"
+            dates="Feb-25 ~ Nov-25"
             location="Stirling, UK"
             description="At Costa Coffee I led daily operations while applying my growing web development skills to real business problems. I built tools like the Task Manager and Day-Dot Maker to improve team efficiency and reduce errors. This role sharpened both my leadership and my ability to deliver practical software solutions in real work environments."
             src="/img/costa-coffee.jpg"
@@ -64,7 +64,7 @@ export function Work() {
       content: (
         <div>
           <WorkCard
-            title="Senior Bar Manager (SWAT)"
+            title="Project Assistant (SWAT)"
             src="/img/joe.png"
             location="London, UK"
             company="Joe & the Juice"
@@ -97,7 +97,7 @@ export function Work() {
       content: (
         <div className="flex flex-col">
           <WorkCard
-            title="Electronic Maintenance Technician"
+            title="Quality Control Engineer"
             src="/img/Lerche.jpg"
             location="Valencia, Spain"
             company="Grupo Lerche"

@@ -14,7 +14,7 @@ import PostgreSQL from '../../../public/icons/PostgreSQL'
 import MySQL from '../../../public/icons/MySQL'
 import HTML from '../../../public/icons/HTML'
 import CSS from '../../../public/icons/CSS'
-import Miro from '../../../public/icons/Miro'
+import Astro from '../../../public/icons/Astro'
 
 export default function Stack() {
     return (
@@ -41,7 +41,7 @@ export default function Stack() {
                         <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-cyan-600 text-white'><MySQL /> MySQL</li>
                         <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-amber-500'><HTML /> HTML</li>
                         <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-violet-600'><CSS /> CSS</li>
-                        <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-yellow-400 text-black'><Miro /> Miro</li>
+                        <li className='font-bold h-24 w-24 md:h-32 md:w-32 text-sm flex flex-col justify-around items-center p-4 bg-orange-500 text-black'><Astro /> Astro</li>
                     </ul>
                 </div>
             </div>
