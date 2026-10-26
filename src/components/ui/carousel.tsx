@@ -1,6 +1,7 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import { useReducedMotion } from "motion/react";
 
 interface SlideData {
   title: string;
@@ -168,6 +169,8 @@ interface CarouselProps {
 
 export function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
+  const [autoAdvance, setAutoAdvance] = useState(true);
+  const prefersReducedMotion = useReducedMotion();
 
   const handlePreviousClick = () => {
     const previous = current - 1;
@@ -185,12 +188,29 @@ export function Carousel({ slides }: CarouselProps) {
     }
   };
 
+  // Auto-advance rotates through the slides until the visitor interacts
+  // with the carousel. Hovering or focusing pauses it so the content
+  // never moves under the cursor.
+  useEffect(() => {
+    if (!autoAdvance || prefersReducedMotion) return;
+
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(timer);
+  }, [autoAdvance, prefersReducedMotion, slides.length]);
+
   const id = useId();
 
   return (
     <div
       className="relative w-[80vmin] h-[90vmin] md:w-[50vmin] md:h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
+      onMouseEnter={() => setAutoAdvance(false)}
+      onMouseLeave={() => setAutoAdvance(true)}
+      onFocus={() => setAutoAdvance(false)}
+      onBlur={() => setAutoAdvance(true)}
     >
       <ul
         className="absolute flex transition-transform duration-1000 ease-in-out"
@@ -221,6 +241,24 @@ export function Carousel({ slides }: CarouselProps) {
           title="Go to next slide"
           handleClick={handleNextClick}
         />
+      </div>
+
+      {/* Progress dots make the auto-advance state legible. */}
+      <div className="absolute flex justify-center w-full top-[calc(100%+4rem)] gap-2">
+        {slides.map((slide, index) => (
+          <button
+            key={slide.title}
+            type="button"
+            aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+            aria-current={index === current}
+            onClick={() => handleSlideClick(index)}
+            className={`h-2 rounded-full transition-all duration-500 ${
+              index === current
+                ? "w-6 bg-yellow-400"
+                : "w-2 bg-slate-600 hover:bg-slate-400"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
