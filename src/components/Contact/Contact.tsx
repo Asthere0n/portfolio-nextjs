@@ -1,12 +1,18 @@
+"use client";
+
 import React from 'react'
+import { motion, useReducedMotion } from "motion/react"
 import ContactLinks from '../ContactLinks/ContactLinks'
 import EmploymentStatus from './EmploymentStatus/EmploymentStatus'
+import { EASE_OUT_EXPO } from '../ui/motion-config'
 
 export default function Contact() {
-  return (
-    <div className='min-h-160 bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden'
-      style={{
-      backgroundImage: `
+    const prefersReducedMotion = useReducedMotion()
+
+    return (
+        <div className='min-h-160 bg-slate-950 w-full flex flex-col justify-center items-center overflow-hidden relative'
+        style={{
+        backgroundImage: `
       linear-gradient(
       to top,
       rgba(2, 6, 23, 0) 0%,
@@ -19,12 +25,38 @@ export default function Contact() {
       backgroundPosition: 'left',
       backgroundRepeat: 'no-repeat',
       }}>
-      <div className='flex flex-col p-8 gap-4 items-center justify-center w-[90%] lg:w-[50%] h-fit md:mx-8 rounded-2xl border-4 border-slate-500'
-      style={{ backgroundColor: 'rgba(2, 6, 23, 0.85)' }}>
+      {/* Slow zoom on the backdrop keeps the closing section alive without
+          pulling attention away from the call to action. */}
+      <motion.div
+      aria-hidden="true"
+      className="absolute inset-0 bg-cover bg-left"
+      style={{
+        backgroundImage: "url('/img/ContactBackground.jpg')",
+      }}
+      animate={
+        prefersReducedMotion
+          ? undefined
+          : { scale: [1, 1.12, 1], backgroundPosition: ["left center", "60% center", "left center"] }
+      }
+      transition={
+        prefersReducedMotion
+          ? undefined
+          : { duration: 24, ease: "easeInOut", repeat: Infinity }
+      }
+      />
+
+      <motion.div
+      className='relative flex flex-col p-8 gap-4 items-center justify-center w-[90%] lg:w-[50%] h-fit md:mx-8 rounded-2xl border-4 border-slate-500'
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
+      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={prefersReducedMotion ? undefined : { duration: 0.6, ease: EASE_OUT_EXPO }}
+      style={{ backgroundColor: 'rgba(2, 6, 23, 0.85)' }}
+      >
       <EmploymentStatus />
       <h2 className='text-2xl py-4'> If you've got this far, I think we should get in touch.</h2>
       <ContactLinks />
-      </div>
+      </motion.div>
     </div>
-  )
+    )
 }

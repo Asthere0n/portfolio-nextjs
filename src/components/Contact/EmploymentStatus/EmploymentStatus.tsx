@@ -1,12 +1,27 @@
+"use client";
+
 import Link from 'next/link'
 import React from 'react'
+import { motion, useReducedMotion } from "motion/react"
 
 export default function EmploymentStatus() {
+    const prefersReducedMotion = useReducedMotion()
+
     return (
     <Link
       href='mailto:fullstackcristian@gmail.com'
-      className='group flex justify-around items-center pointer text-md sm:text-xl hover:text-shadow-2xs text-shadow-white text-green-400 p-3 border-4 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:shadow-2xl shadow-green-600 font-bold transition-all duration-300'>
-      <svg width={30} height={30} viewBox="0 0 24 24" fill="none" stroke="currentColor" className='mr-3' xmlns="http://www.w3.org/2000/svg">
+      className='group relative flex justify-around items-center pointer text-md sm:text-xl hover:text-shadow-2xs text-shadow-white text-green-400 p-3 border-4 border-green-400 rounded-lg hover:bg-green-400 hover:text-white hover:shadow-2xl shadow-green-600 font-bold transition-all duration-300'
+    >
+      {/* Soft pulsing halo that signals the "open to work" state. */}
+      {!prefersReducedMotion && (
+        <motion.span
+        aria-hidden="true"
+        className="absolute inset-0 rounded-lg border-2 border-green-400"
+        animate={{ opacity: [0.6, 0, 0.6], scale: [1, 1.06, 1] }}
+        transition={{ duration: 2.4, ease: "easeInOut", repeat: Infinity }}
+        />
+      )}
+      <svg width={30} height={30} viewBox="0 0 24 24" fill="none" stroke="currentColor" className='mr-3 relative' xmlns="http://www.w3.org/2000/svg">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -14,7 +29,7 @@ export default function EmploymentStatus() {
               className="fill-current text-green-400 group-hover:text-white transition-colors duration-300"
             />
           </svg>
-          CURRENTLY EMPLOYED
+          <span className="relative">CURRENTLY EMPLOYED</span>
     </Link>
   )
 }
