@@ -53,7 +53,7 @@ export default function Hero() {
                 opacity: [0.35, 0.7, 0.35],
             }}
             transition={{
-                duration: 5,
+                duration: 4,
                 ease: "easeInOut",
                 repeat: Infinity,
             }}
@@ -63,7 +63,7 @@ export default function Hero() {
         <m.div
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.1 }}
+        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.05 }}
         className='relative'
         onHoverStart={() => !prefersReducedMotion && setPortraitHovered(true)}
         onHoverEnd={() => !prefersReducedMotion && setPortraitHovered(false)}
@@ -78,8 +78,8 @@ export default function Hero() {
             animate={{ rotate: portraitHovered ? 360 : 0, opacity: portraitHovered ? 1 : 0 }}
             transition={
                 portraitHovered
-                    ? { rotate: { duration: 4, ease: "linear", repeat: Infinity }, opacity: { duration: 0.3 } }
-                    : { duration: 0.3 }
+                    ? { rotate: { duration: 3, ease: "linear", repeat: Infinity }, opacity: { duration: 0.2 } }
+                    : { duration: 0.2 }
             }
             style={{ transformOrigin: "50% 50%" }}
             >
@@ -112,7 +112,7 @@ export default function Hero() {
             className='absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent'
             initial={{ x: '-120%' }}
             animate={{ x: portraitHovered ? '520%' : '-120%' }}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
             />
             </m.div>
         )}
@@ -130,7 +130,7 @@ export default function Hero() {
                 y: portraitHovered ? -8 : 0,
             }
         }
-        transition={prefersReducedMotion ? undefined : { duration: 0.35 }}
+        transition={prefersReducedMotion ? undefined : { duration: 0.25 }}
         >
         <Image
         src='/img/Portrait.webp'
@@ -154,7 +154,7 @@ export default function Hero() {
         transition={
             prefersReducedMotion
             ? undefined
-            : { duration: 0.6, ease: EASE_OUT_EXPO, delay: 0.25 }
+            : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.15 }
         }
         className='text-4xl p-5 w-full'
         >
@@ -166,7 +166,7 @@ export default function Hero() {
         transition={
             prefersReducedMotion
             ? undefined
-            : { duration: 0.6, ease: EASE_OUT_EXPO, delay: 0.4 }
+            : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.25 }
         }
         className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900 rounded-2xl p-8 border-2 border-slate-800 w-full'
         >
@@ -174,14 +174,14 @@ export default function Hero() {
         <m.span
         initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.6, rotate: -20 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, rotate: 0 }}
-        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.55 }}
+        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.35 }}
         >
         <SpainFlag className='w-12' />
         </m.span>
         <m.span
         initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.6, rotate: 20 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, rotate: 0 }}
-        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.65 }}
+        transition={prefersReducedMotion ? undefined : { ...SPRING_SOFT, delay: 0.42 }}
         >
         <UKFlag className='w-12' />
         </m.span>
@@ -195,7 +195,7 @@ export default function Hero() {
         transition={
             prefersReducedMotion
             ? undefined
-            : { duration: 0.6, ease: EASE_OUT_EXPO, delay: 0.55 }
+            : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.35 }
         }
         className='text-lg p-5 text-justify text-white w-[30ch] md:w-[55ch]'
         >
@@ -207,7 +207,7 @@ export default function Hero() {
         transition={
             prefersReducedMotion
             ? undefined
-            : { duration: 0.6, ease: EASE_OUT_EXPO, delay: 0.7 }
+            : { duration: 0.5, ease: EASE_OUT_EXPO, delay: 0.45 }
         }
         >
         <ContactLinks />

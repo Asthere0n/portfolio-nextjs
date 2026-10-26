@@ -7,9 +7,9 @@ import mapData from './MapData.json'
 const CELL_SIZE = 24
 
 /** Delay between the reveal of each horizontal line, in seconds. */
-const ROW_STAGGER = 0.045
+const ROW_STAGGER = 0.03
 /** Delay before the first line appears. */
-const ROW_START_DELAY = 0.15
+const ROW_START_DELAY = 0.1
 
 function getStyle(content: number) {
     switch (content) {
